@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="LinuxIncluded">
+      <UniqueIdentifier>{d52fbe2c-daf9-48ab-9be1-07c58ed5edec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cuda">
+      <UniqueIdentifier>{900a219c-8767-4710-903a-944995deffba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cuda\convert">
+      <UniqueIdentifier>{b980deaa-398b-47e0-b466-a24ca56f7c55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cuda\gpb">
+      <UniqueIdentifier>{4de691ad-29c2-44b4-b3eb-b999d08f1d04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cuda\localcues">
+      <UniqueIdentifier>{16fdf204-ff2a-48e3-8d66-c1cbea1fe3be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cuda\nonmax">
+      <UniqueIdentifier>{a103fafc-9683-4e98-843a-27b0603a0c28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cuda\noReorthog">
+      <UniqueIdentifier>{087e3015-84de-4dee-838b-1f08d8dece32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cuda\postprocess">
+      <UniqueIdentifier>{2ebb865b-372e-465e-bc07-0265e7b1afe4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cuda\spb">
+      <UniqueIdentifier>{e0e23083-faca-4d66-8254-d436eca71f1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cuda\texons">
+      <UniqueIdentifier>{c7992981-ac0c-47cc-88af-30c44241a2f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LinuxIncluded\includefile">
+      <UniqueIdentifier>{4086b8ae-a36b-46c5-9cbe-cb970535e3ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cuda\StencilMVM">
+      <UniqueIdentifier>{cb57885f-b71f-4818-89b9-de37d1c9af57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cuda\intervene">
+      <UniqueIdentifier>{1ec97093-bdac-4f58-87f3-94708cd344a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cuda\common">
+      <UniqueIdentifier>{38d2d7c0-4e3b-40f4-9736-321d26b0085a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cuda\combine">
+      <UniqueIdentifier>{c36f18af-e774-475e-a02a-52fa567be4dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cuda\junction">
+      <UniqueIdentifier>{39327f05-dd28-44e9-af24-ace169b9be54}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="localcues\gradient.h">
+      <Filter>LinuxIncluded</Filter>
+    </ClInclude>
+    <ClInclude Include="localcues\rotate.h">
+      <Filter>LinuxIncluded</Filter>
+    </ClInclude>
+    <ClInclude Include="localcues\rotate.64.h">
+      <Filter>LinuxIncluded</Filter>
+    </ClInclude>
+    <ClInclude Include="localcues\spec.h">
+      <Filter>LinuxIncluded</Filter>
+    </ClInclude>
+    <ClInclude Include="postprocess\skeleton.h">
+      <Filter>LinuxIncluded</Filter>
+    </ClInclude>
+    <ClInclude Include="textons\filters.h">
+      <Filter>LinuxIncluded</Filter>
+    </ClInclude>
+    <ClInclude Include="include\combine.h">
+      <Filter>LinuxIncluded\includefile</Filter>
+    </ClInclude>
+    <ClInclude Include="include\convert.h">
+      <Filter>LinuxIncluded\includefile</Filter>
+    </ClInclude>
+    <ClInclude Include="include\globalPb.h">
+      <Filter>LinuxIncluded\includefile</Filter>
+    </ClInclude>
+    <ClInclude Include="include\intervening.h">
+      <Filter>LinuxIncluded\includefile</Filter>
+    </ClInclude>
+    <ClInclude Include="include\kmeans.h">
+      <Filter>LinuxIncluded\includefile</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lanczos.h">
+      <Filter>LinuxIncluded\includefile</Filter>
+    </ClInclude>
+    <ClInclude Include="include\localcues.h">
+      <Filter>LinuxIncluded\includefile</Filter>
+    </ClInclude>
+    <ClInclude Include="include\nonmax.h">
+      <Filter>LinuxIncluded\includefile</Filter>
+    </ClInclude>
+    <ClInclude Include="include\spectralPb.h">
+      <Filter>LinuxIncluded\includefile</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Stencil.h">
+      <Filter>LinuxIncluded\includefile</Filter>
+    </ClInclude>
+    <ClInclude Include="include\stencilMVM.h">
+      <Filter>LinuxIncluded\includefile</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texton.h">
+      <Filter>LinuxIncluded\includefile</Filter>
+    </ClInclude>
+    <ClInclude Include="unistd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="linux_time.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows_acml.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cuda_common.cuh">
+      <Filter>Cuda\common</Filter>
+    </ClInclude>
+    <ClInclude Include="localcues\gradient.64.h">
+      <Filter>LinuxIncluded</Filter>
+    </ClInclude>
+    <ClInclude Include="include\combine.64.h">
+      <Filter>LinuxIncluded\includefile</Filter>
+    </ClInclude>
+    <ClInclude Include="include\localcues.64.h">
+      <Filter>LinuxIncluded\includefile</Filter>
+    </ClInclude>
+    <ClInclude Include="junction_cpp.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="image_enhance.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="localcues\cpu_convolve2d.cc">
+      <Filter>LinuxIncluded</Filter>
+    </ClCompile>
+    <ClCompile Include="textons\filters.cpp">
+      <Filter>LinuxIncluded</Filter>
+    </ClCompile>
+    <ClCompile Include="stencilMatrixMultiply\load_smatrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stencilMatrixMultiply\Stencil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="linux_time.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="windows_acml.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="junction_cpp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="image_enhance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="combine\combinemain.cu">
+      <Filter>Cuda\combine</Filter>
+    </CudaCompile>
+    <CudaCompile Include="combine\combine.cu">
+      <Filter>Cuda\combine</Filter>
+    </CudaCompile>
+    <CudaCompile Include="combine\main.cu">
+      <Filter>Cuda\combine</Filter>
+    </CudaCompile>
+    <CudaCompile Include="combine\combine.64.cu">
+      <Filter>Cuda\combine</Filter>
+    </CudaCompile>
+    <CudaCompile Include="convert\convertmain.cu">
+      <Filter>Cuda\convert</Filter>
+    </CudaCompile>
+    <CudaCompile Include="convert\convert.cu">
+      <Filter>Cuda\convert</Filter>
+    </CudaCompile>
+    <CudaCompile Include="gPb\gpbmain.cu">
+      <Filter>Cuda\gpb</Filter>
+    </CudaCompile>
+    <CudaCompile Include="gPb\globalPb.cu">
+      <Filter>Cuda\gpb</Filter>
+    </CudaCompile>
+    <CudaCompile Include="localcues\rotate.64.cu">
+      <Filter>Cuda\localcues</Filter>
+    </CudaCompile>
+    <CudaCompile Include="localcues\parabola.cu">
+      <Filter>Cuda\localcues</Filter>
+    </CudaCompile>
+    <CudaCompile Include="localcues\localcuesmain.cu">
+      <Filter>Cuda\localcues</Filter>
+    </CudaCompile>
+    <CudaCompile Include="localcues\localcues.cu">
+      <Filter>Cuda\localcues</Filter>
+    </CudaCompile>
+    <CudaCompile Include="localcues\localcues.64.cu">
+      <Filter>Cuda\localcues</Filter>
+    </CudaCompile>
+    <CudaCompile Include="localcues\gradient.cu">
+      <Filter>Cuda\localcues</Filter>
+    </CudaCompile>
+    <CudaCompile Include="localcues\rotate.cu">
+      <Filter>Cuda\localcues</Filter>
+    </CudaCompile>
+    <CudaCompile Include="localcues\gradient.64.cu">
+      <Filter>Cuda\localcues</Filter>
+    </CudaCompile>
+    <CudaCompile Include="textons\texton.cu">
+      <Filter>Cuda\texons</Filter>
+    </CudaCompile>
+    <CudaCompile Include="textons\texton.64.cu">
+      <Filter>Cuda\texons</Filter>
+    </CudaCompile>
+    <CudaCompile Include="textons\kmeans_noatomics.cu">
+      <Filter>Cuda\texons</Filter>
+    </CudaCompile>
+    <CudaCompile Include="textons\kmeans.cu">
+      <Filter>Cuda\texons</Filter>
+    </CudaCompile>
+    <CudaCompile Include="textons\kmeans.64.cu">
+      <Filter>Cuda\texons</Filter>
+    </CudaCompile>
+    <CudaCompile Include="sPb\spectralPb.cu">
+      <Filter>Cuda\spb</Filter>
+    </CudaCompile>
+    <CudaCompile Include="sPb\spbmain.cu">
+      <Filter>Cuda\spb</Filter>
+    </CudaCompile>
+    <CudaCompile Include="nonmax\nonmaxmain.cu">
+      <Filter>Cuda\nonmax</Filter>
+    </CudaCompile>
+    <CudaCompile Include="nonmax\nonmax.cu">
+      <Filter>Cuda\nonmax</Filter>
+    </CudaCompile>
+    <CudaCompile Include="noReorthog\lanczos.cu">
+      <Filter>Cuda\noReorthog</Filter>
+    </CudaCompile>
+    <CudaCompile Include="noReorthog\lanczosmain.cu">
+      <Filter>Cuda\noReorthog</Filter>
+    </CudaCompile>
+    <CudaCompile Include="postprocess\skeleton.cu">
+      <Filter>Cuda\postprocess</Filter>
+    </CudaCompile>
+    <CudaCompile Include="postprocess\postprocessmain.cu">
+      <Filter>Cuda\postprocess</Filter>
+    </CudaCompile>
+    <CudaCompile Include="damascene\damascene.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="stencilMatrixMultiply\main.cu">
+      <Filter>Cuda\StencilMVM</Filter>
+    </CudaCompile>
+    <CudaCompile Include="stencilMatrixMultiply\stencilMVM.cu">
+      <Filter>Cuda\StencilMVM</Filter>
+    </CudaCompile>
+    <CudaCompile Include="textons\textonFilterMain.cu">
+      <Filter>Cuda\texons</Filter>
+    </CudaCompile>
+    <CudaCompile Include="noReorthog\spectralPb_kernel.cu">
+      <Filter>Cuda\spb</Filter>
+    </CudaCompile>
+    <CudaCompile Include="intervening\intervening.cu">
+      <Filter>Cuda\intervene</Filter>
+    </CudaCompile>
+    <CudaCompile Include="intervening\interveningmain.cu">
+      <Filter>Cuda\intervene</Filter>
+    </CudaCompile>
+    <CudaCompile Include="intervening\main.cu">
+      <Filter>Cuda\intervene</Filter>
+    </CudaCompile>
+    <CudaCompile Include="cuda_common.cu">
+      <Filter>Cuda\common</Filter>
+    </CudaCompile>
+    <CudaCompile Include="MemTest.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="junction\junction.cu">
+      <Filter>Cuda\junction</Filter>
+    </CudaCompile>
+  </ItemGroup>
+</Project>

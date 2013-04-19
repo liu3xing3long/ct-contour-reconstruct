@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "damascene_win", "damascene_win\damascene_win.vcxproj", "{54999832-80E5-4B03-9266-846EA1FBA553}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		MEMTEST|Win32 = MEMTEST|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54999832-80E5-4B03-9266-846EA1FBA553}.Debug|Win32.ActiveCfg = Debug|Win32
+		{54999832-80E5-4B03-9266-846EA1FBA553}.Debug|Win32.Build.0 = Debug|Win32
+		{54999832-80E5-4B03-9266-846EA1FBA553}.MEMTEST|Win32.ActiveCfg = MEMTEST|Win32
+		{54999832-80E5-4B03-9266-846EA1FBA553}.MEMTEST|Win32.Build.0 = MEMTEST|Win32
+		{54999832-80E5-4B03-9266-846EA1FBA553}.Release|Win32.ActiveCfg = Release|Win32
+		{54999832-80E5-4B03-9266-846EA1FBA553}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
