@@ -5,9 +5,12 @@
 #include <cuda.h>
 #include <cutil.h>
 #include "convert.h"
+#include "image_enhance.h"
 
 #define XBLOCK 16
 #define YBLOCK 16
+
+#define IMAGE_ENHANCE
 
 __global__ void rgbUtoGreyF_kernel(int width, int height, unsigned int* rgbU, float* grey) {
 	int x = blockDim.x * blockIdx.x + threadIdx.x;
@@ -111,10 +114,12 @@ void loadPPM_rgbU(char* filename, uint* p_width, uint* p_height, uint** p_devRgb
 	unsigned char* data;	
 	cutLoadPPM4ub(filename, (unsigned char**)&data, p_width, p_height);
 	uint imageSize = sizeof(uint) * (*p_width) * (*p_height);
-
-	//   unsigned char* p_dev_data;
-	//   CUDA_SAFE_CALL(cudaMalloc((void**)&p_dev_data, imageSize));
-	//   cudaMemcpy(p_dev_data, data, imageSize, cudaMemcpyHostToDevice);
+	
+#ifdef IMAGE_ENHANCE
+	/// 增强图像，加大对比度
+	printf("Enhancing image %s...... \n",filename);
+	MSRCR(data, *p_width, *p_height, sizeof(unsigned int), false);
+#endif
 
 	CUDA_SAFE_CALL(cudaMalloc((void**)p_devRgbU, imageSize));
 	cudaMemcpy(*p_devRgbU, data, imageSize, cudaMemcpyHostToDevice);

@@ -6,9 +6,4 @@ void junctionComputation(float* fControus, int width, int height);
 
 
 
-
-
-
-
-
 #endif // junction_cpp_h__

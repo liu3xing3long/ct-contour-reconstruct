@@ -1,5 +1,8 @@
 #include "stdafx.h"
 #include "junction_cpp.h"
+#include <vector>
+
+
 
 void junctionComputation( float* fControus, int width, int height )
 {

@@ -153,6 +153,9 @@
     <ClInclude Include="image_enhance.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="CircleTemplateTrace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -180,6 +183,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="image_enhance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CircleTemplateTrace.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

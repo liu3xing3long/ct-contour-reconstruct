@@ -1,121 +1,289 @@
-﻿Build started 2013/4/20 星期六 0:10:38.
-     1>Project "E:\damascene-0.1.1\damascene_win\damascene_win\damascene_win.vcxproj" on node 2 (clean target(s)).
-     1>_PrepareForClean:
-         Deleting file "Debug\damascene_win.lastbuildstate".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmp274cb38629f64a3f83d1dc6d246696ca.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\combine.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\combine\combine.cu" -clean
+﻿Build started 2013/4/20 星期六 15:48:37.
+     1>Project "E:\ct-contour-reconstruction\damascene_win\damascene_win.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\damascene_win.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /D_DEBUG /D_CONSOLE /DHAVE_LAPACK_CONFIG_H /DLAPACK_COMPLEX_STRUCTURE /DADD_ /D_MBCS /I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" /I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" /I.\include /I. /I..\lapacke\include /I..\getopt9\include /I..\cutil\include /I.\include /I.\ /I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" /I. /FIcuda_runtime.h /c E:\ct-contour-reconstruction\damascene_win\damascene\damascene.cu 
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompilePropsDeps:
+       Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file combine\combine.64.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file combine\combinemain.cu (excluded from build).
+       CudaBuild:
+         Skipping CUDA source file combine\main.cu (excluded from build).
+         Skipping CUDA source file intervening\main.cu (excluded from build).
+         Skipping CUDA source file stencilMatrixMultiply\main.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file convert\convertmain.cu (excluded from build).
+       CudaBuild:
+         Compiling CUDA source file damascene\damascene.cu...
+         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmpca24f95bd16f4b9284bf1e3f1329e55f.cmd"
+         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2010 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\damascene.cu.obj" "E:\ct-contour-reconstruction\damascene_win\damascene\damascene.cu"
          
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\combine.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\combine\combine.cu" -clean 
-         Deleting file "Debug\combine\combine.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmpe9a03da3f227489ab8be64be2375b915.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\convert.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\convert\convert.cu" -clean
+         E:\ct-contour-reconstruction\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2010 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\damascene.cu.obj" "E:\ct-contour-reconstruction\damascene_win\damascene\damascene.cu" 
+         damascene.cu
+     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(573): warning : non-void function "main" should return a value
          
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\convert.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\convert\convert.cu" -clean 
-         Deleting file "Debug\convert\convert.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmp7e8d3c59faf5475a927badd4de6c9c15.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\damascene.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\damascene\damascene.cu" -clean
+     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(576): warning : dynamic initialization in unreachable code
          
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\damascene.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\damascene\damascene.cu" -clean 
-         Deleting file "Debug\damascene\damascene.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmpf827f70f75c244b4a471697dd85040d2.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\globalPb.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\gPb\globalPb.cu" -clean
+         tmpxft_00000b10_00000000-2_damascene.cudafe1.gpu
+         tmpxft_00000b10_00000000-7_damascene.cudafe2.gpu
+         damascene.cu
+     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(573): warning : non-void function "main" should return a value
          
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\globalPb.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\gPb\globalPb.cu" -clean 
-         Deleting file "Debug\gPb\globalPb.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmpd4bed4b8b584409bba9d899a75533e7e.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\intervening.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\intervening\intervening.cu" -clean
+     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(576): warning : dynamic initialization in unreachable code
          
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\intervening.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\intervening\intervening.cu" -clean 
-         Deleting file "Debug\intervening\intervening.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmp0a456a0f3bcb4395b624c48c9cfa7002.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\junction.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\junction\junction.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\junction.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\junction\junction.cu" -clean 
-         Deleting file "Debug\junction\junction.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmpf452382939854fefb58a69f9cd6e48b4.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\gradient.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\localcues\gradient.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\gradient.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\localcues\gradient.cu" -clean 
-         Deleting file "Debug\localcues\gradient.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmp3c619570f5784e4682a6a6627b5137be.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\localcues.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\localcues\localcues.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\localcues.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\localcues\localcues.cu" -clean 
-         Deleting file "Debug\localcues\localcues.cu.deps".
-       CudaClean:
-         Deleting file "Debug\localcues\localcuesmain.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmp1aee26162e3d4e3a877a8acd7177d7e7.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\parabola.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\localcues\parabola.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\parabola.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\localcues\parabola.cu" -clean 
-         Deleting file "Debug\localcues\parabola.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmp4c09de3b97f14499b44ac27cd2b925cc.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\rotate.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\localcues\rotate.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\rotate.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\localcues\rotate.cu" -clean 
-         Deleting file "Debug\localcues\rotate.cu.deps".
-       CudaClean:
-         Deleting file "Debug\MemTest.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmp88f4dc57cb2f4eaaab5ab67cad536404.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\nonmax.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\nonmax\nonmax.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\nonmax.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\nonmax\nonmax.cu" -clean 
-         Deleting file "Debug\nonmax\nonmax.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmp1c177663fbe74d49b94207ef1f94f9fb.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\lanczos.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\noReorthog\lanczos.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\lanczos.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\noReorthog\lanczos.cu" -clean 
-         Deleting file "Debug\noReorthog\lanczos.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmpe6c4c8fa652d448bb61a4dc0af099e8d.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\skeleton.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\postprocess\skeleton.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\skeleton.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\postprocess\skeleton.cu" -clean 
-         Deleting file "Debug\postprocess\skeleton.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmpaf41faa096824eaca170d32096a5fa83.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\spectralPb.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\sPb\spectralPb.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\spectralPb.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\sPb\spectralPb.cu" -clean 
-         Deleting file "Debug\sPb\spectralPb.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmpa37a31022b244364b22fb865cf357a84.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\stencilMVM.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\stencilMatrixMultiply\stencilMVM.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\stencilMVM.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\stencilMatrixMultiply\stencilMVM.cu" -clean 
-         Deleting file "Debug\stencilMatrixMultiply\stencilMVM.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmpecc84848f17541f5b7f819f052c52403.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\kmeans.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\textons\kmeans.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\kmeans.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\textons\kmeans.cu" -clean 
-         Deleting file "Debug\textons\kmeans.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmp30a37e86208b4470936514d990159837.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\texton.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\textons\texton.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\texton.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\textons\texton.cu" -clean 
-         Deleting file "Debug\textons\texton.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmp9be6fdb855664948b143a46128e878b1.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\cuda_common.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\cuda_common.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\cuda_common.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\cuda_common.cu" -clean 
-         Deleting file "Debug\cuda_common.cu.deps".
-     1>Done Building Project "E:\damascene-0.1.1\damascene_win\damascene_win\damascene_win.vcxproj" (clean target(s)).
+         tmpxft_00000b10_00000000-2_damascene.cudafe1.cpp
+         tmpxft_00000b10_00000000-12_damascene.ii
+     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(45): warning C4018: '<' : signed/unsigned mismatch
+     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(46): warning C4018: '<' : signed/unsigned mismatch
+     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(64): warning C4018: '<' : signed/unsigned mismatch
+     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(66): warning C4018: '<' : signed/unsigned mismatch
+     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(153): warning C4305: '=' : truncation from 'double' to 'float'
+     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(158): warning C4305: '=' : truncation from 'double' to 'float'
+     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(171): warning C4305: '=' : truncation from 'double' to 'float'
+     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(178): warning C4305: '=' : truncation from 'double' to 'float'
+     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(186): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(195): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(233): warning C4305: 'initializing' : truncation from 'double' to 'float'
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file gPb\gpbmain.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file intervening\interveningmain.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file localcues\gradient.64.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file localcues\localcues.64.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file localcues\localcuesmain.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file localcues\rotate.64.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file MemTest.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file nonmax\nonmaxmain.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file noReorthog\lanczosmain.cu (excluded from build).
+       CudaBuild:
+         Skipping CUDA source file noReorthog\spectralPb_kernel.cu (excluded from build).
+       CudaBuild:
+         Skipping CUDA source file postprocess\postprocessmain.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file sPb\spbmain.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file textons\kmeans.64.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file textons\kmeans_noatomics.cu (excluded from build).
+       CudaBuild:
+         Skipping CUDA source file textons\texton.64.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file textons\textonFilterMain.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I.\include /I.\ /I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D HAVE_LAPACK_CONFIG_H /D LAPACK_COMPLEX_STRUCTURE /D ADD_ /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\damascene_win.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /wd4819 /analyze- /errorReport:prompt image_enhance.cpp junction_cpp.cpp linux_time.cpp stdafx.cpp windows_acml.cpp
+     1>cl : Command line warning D9030: '/Yc' is incompatible with multiprocessing; ignoring /MP switch
+         image_enhance.cpp
+     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.h(49): warning C4305: 'initializing' : truncation from 'double' to 'gfloat'
+     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(136): warning C4244: '=' : conversion from 'int' to 'gfloat', possible loss of data
+     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(140): warning C4244: '=' : conversion from 'int' to 'gfloat', possible loss of data
+     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(141): warning C4244: '=' : conversion from 'gint' to 'gfloat', possible loss of data
+     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(152): warning C4244: '=' : conversion from 'double' to 'gfloat', possible loss of data
+     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(158): warning C4244: '=' : conversion from 'double' to 'gfloat', possible loss of data
+     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(193): warning C4244: '=' : conversion from 'double' to 'gfloat', possible loss of data
+     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(197): warning C4244: '=' : conversion from 'double' to 'gfloat', possible loss of data
+     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(349): warning C4244: '=' : conversion from 'double' to 'gfloat', possible loss of data
+     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(397): warning C4244: '+=' : conversion from 'double' to 'gfloat', possible loss of data
+     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(425): warning C4244: '=' : conversion from 'double' to 'gfloat', possible loss of data
+     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(427): warning C4244: '=' : conversion from 'double' to 'gfloat', possible loss of data
+     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(428): warning C4244: '=' : conversion from 'double' to 'gfloat', possible loss of data
+     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(429): warning C4244: '=' : conversion from 'double' to 'gfloat', possible loss of data
+     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(459): warning C4244: 'argument' : conversion from 'gfloat' to 'const int', possible loss of data
+         junction_cpp.cpp
+         linux_time.cpp
+         stdafx.cpp
+         windows_acml.cpp
+       ManifestResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\ct-contour-reconstruction\Debug\damascene_win.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\clapack\lib /LIBPATH:"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\lib\Win32" /LIBPATH:..\cutil\lib /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\lib\Win32" cuda.lib cudart.lib cublas.lib cutil.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\damascene_win.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\ct-contour-reconstruction\Debug\damascene_win.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\ct-contour-reconstruction\Debug\damascene_win.lib" /MACHINE:X86 Debug\combine.cu.obj
+         Debug\convert.cu.obj
+         Debug\damascene.cu.obj
+         Debug\globalPb.cu.obj
+         Debug\intervening.cu.obj
+         Debug\junction.cu.obj
+         Debug\gradient.cu.obj
+         Debug\localcues.cu.obj
+         Debug\parabola.cu.obj
+         Debug\rotate.cu.obj
+         Debug\nonmax.cu.obj
+         Debug\lanczos.cu.obj
+         Debug\skeleton.cu.obj
+         Debug\spectralPb.cu.obj
+         Debug\stencilMVM.cu.obj
+         Debug\kmeans.cu.obj
+         Debug\texton.cu.obj
+         Debug\cuda_common.cu.obj
+         Debug\damascene_win.exe.embed.manifest.res
+         Debug\image_enhance.obj
+         Debug\junction_cpp.obj
+         Debug\windows_acml.obj
+         Debug\linux_time.obj
+         Debug\stdafx.obj
+         Debug\Stencil.obj
+         Debug\filters.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\damascene_win.exe.embed.manifest" /manifest Debug\damascene_win.exe.intermediate.manifest
+         All outputs are up-to-date.
+       LinkEmbedManifest:
+         All outputs are up-to-date.
+         damascene_win.vcxproj -> E:\ct-contour-reconstruction\Debug\damascene_win.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\damascene_win.unsuccessfulbuild".
+         Touching "Debug\damascene_win.lastbuildstate".
+     1>Done Building Project "E:\ct-contour-reconstruction\damascene_win\damascene_win.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:07.80
+Time Elapsed 00:00:08.28

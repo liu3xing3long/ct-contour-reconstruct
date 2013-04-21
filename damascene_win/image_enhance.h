@@ -8,7 +8,6 @@ typedef int gint;
 typedef double gdouble;
 typedef bool gboolean;
 
-void image_Enhance(float* fImage, int width, int height);
 
 typedef struct
 {

@@ -26,12 +26,6 @@ template <typename T> T CLAMP(const T& value, const T& low, const T& high)
 }
 
 
-void image_Enhance( float* fImage, int width, int height )
-{
-
-}
-
-
 #include <string.h>
 #include <math.h>
 

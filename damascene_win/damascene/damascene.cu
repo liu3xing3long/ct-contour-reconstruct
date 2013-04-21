@@ -20,6 +20,8 @@
 #include "globalPb.h"
 #include "skeleton.h"
 
+#include "CircleTemplateTrace.h"
+
 #define __TIMER_SPECFIC
 /*
 *	可读文本格式输出数据
@@ -275,6 +277,8 @@ int main(int argc, char** argv) {
 		sprintf(&outputGradientfilename[0] + (period - filename), "_gradient.pgm");
 #endif
 
+//////////////////////////////////////////////////////////////////////////
+#if 1
 		uint width = 0;
 		uint height = 0;
 		uint* devRgbU = NULL;
@@ -283,22 +287,21 @@ int main(int argc, char** argv) {
  		printf("Image found: %i x %i pixels\n", width, height);
  		assert(width > 0);
  		assert(height > 0);
-#if 0
+#else
 #include "image_enhance.h"
 		unsigned char* data;	
 		uint width = 0;
 		uint height = 0;
 		int nPixels = width * height;
+		uint* devRgbU = NULL;
 
 		cutLoadPPM4ub(filename, (unsigned char**)&data, &width, &height);
-
-		unsigned char* pData =(unsigned char*)malloc(width*height* sizeof(unsigned int));
-		memcpy(pData, data, width*height* sizeof(unsigned int));
 		MSRCR(data, width, height, sizeof(unsigned int), false);
 		cutSavePPM4ub(outputGradientfilename, data, width, height);
 
 		return;
 #endif
+//////////////////////////////////////////////////////////////////////////
 
 		uint timer;
 #ifdef __TIMER_SPECFIC
@@ -561,6 +564,15 @@ int main(int argc, char** argv) {
 		cudaMemcpy(hostGPb, devGPb, sizeof(float)*nPixels, cudaMemcpyDeviceToHost);
 		cutSavePGMf(outputPGMfilename, hostGPb, width, height);
 		writeFile(outputPBfilename, width, height, hostGPb);
+
+
+		/*
+		 *	测试Circle Trace
+		 */
+		CCircleTemplateTrace trace;
+		trace.initStartPoint(279.f, 0.f, 22.185f, width, height);
+ 		trace.tracePoints(hostGPb);
+ 		return;
 
 		/* thin image */
 		float* hostGPb_thin = (float*)malloc(sizeof(float)*nPixels);

@@ -325,6 +325,7 @@
     </CudaCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CircleTemplateTrace.h" />
     <ClInclude Include="cuda_common.cuh">
       <FileType>CppHeader</FileType>
     </ClInclude>
@@ -358,6 +359,7 @@
     <ClInclude Include="windows_acml.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CircleTemplateTrace.cpp" />
     <ClCompile Include="image_enhance.cpp" />
     <ClCompile Include="junction_cpp.cpp" />
     <ClCompile Include="windows_acml.cpp" />
