@@ -6,8 +6,8 @@
 #include <cutil.h>
 #include <fcntl.h>
 #include <unistd.h>
-#include "linux_time.h"
 #include "convert.h"
+#include "common_func.h"
 
 #include "../textons/filters.h"
 
@@ -26,7 +26,7 @@ texture<float, 2, cudaReadModeElementType> texData;
 static inline int timestamp()
 {
     struct timeval tv;
-    gettimeofday(&tv, 0);
+    CommonFunc::gettimeofday(&tv, 0);
     return tv.tv_sec*1000000+tv.tv_usec;
 }
 */

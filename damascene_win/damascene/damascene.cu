@@ -20,7 +20,9 @@
 #include "globalPb.h"
 #include "skeleton.h"
 
+#include "common_func.h"
 #include "CircleTemplateTrace.h"
+#include "LineSegTrace.h"
 
 #define __TIMER_SPECFIC
 /*
@@ -564,15 +566,6 @@ int main(int argc, char** argv) {
 		cudaMemcpy(hostGPb, devGPb, sizeof(float)*nPixels, cudaMemcpyDeviceToHost);
 		cutSavePGMf(outputPGMfilename, hostGPb, width, height);
 		writeFile(outputPBfilename, width, height, hostGPb);
-
-
-		/*
-		 *	≤‚ ‘Circle Trace
-		 */
-		CCircleTemplateTrace trace;
-		trace.initStartPoint(279.f, 0.f, 22.185f, width, height);
- 		trace.tracePoints(hostGPb);
- 		return;
 
 		/* thin image */
 		float* hostGPb_thin = (float*)malloc(sizeof(float)*nPixels);

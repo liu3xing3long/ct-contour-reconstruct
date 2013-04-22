@@ -14,7 +14,6 @@
 #include <cuda.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "linux_time.h"
 #include <getopt.h>
 #include <time.h>
 #include <math.h>
@@ -22,6 +21,7 @@
 #include <vector>
 #include "stencilMVM.h"
 #include "windows_acml.h"
+#include "common_func.h"
 
 
 typedef std::vector<float> floatVector;
@@ -499,7 +499,7 @@ void lanczos(int p_nMatrixDimension, dim3 gridDim, dim3 blockDim,
 
 
 	struct timeval lanczosTimeStart;
-	gettimeofday(&lanczosTimeStart, 0);
+	CommonFunc::gettimeofday(&lanczosTimeStart, 0);
 	int i;
 
 	floatVector* currentIteration = new floatVector();
@@ -511,7 +511,7 @@ void lanczos(int p_nMatrixDimension, dim3 gridDim, dim3 blockDim,
 			printf("lanczos iteration: %d\n", i);
 		}
 		struct timeval start;
-		/*cudaThreadSynchronize();*/ gettimeofday(&start, 0);
+		/*cudaThreadSynchronize();*/ CommonFunc::gettimeofday(&start, 0);
 
 		lanczosIteration(d_aaDMatrixV, 0, iter, d_aVectorQQ, d_aVectorQQPrev, 
 			d_aVectorZ, aBeta, aAlpha, p_nMatrixDimension, width, height,
@@ -548,12 +548,12 @@ void lanczos(int p_nMatrixDimension, dim3 gridDim, dim3 blockDim,
 		}
 
 		struct timeval convergence;
-		/*cudaThreadSynchronize();*/ gettimeofday(&convergence, 0);
+		/*cudaThreadSynchronize();*/ CommonFunc::gettimeofday(&convergence, 0);
 		//currentIteration->push_back(getTimeUs(four64, convergence));
 
 		//cublasScopy(p_nMatrixDimension, d_aVectorQQ, 1, d_aaDMatrixV + (i+1)*p_nMatrixDimension, 1);
 		struct timeval stop;
-		/*cudaThreadSynchronize();*/ gettimeofday(&stop, 0);
+		/*cudaThreadSynchronize();*/ CommonFunc::gettimeofday(&stop, 0);
 		currentIteration->push_back(getTimeUs(convergence, stop));
 		currentIteration->push_back(getTimeUs(start, stop));
 		times.push_back(currentIteration);
@@ -626,12 +626,12 @@ void lanczos(int p_nMatrixDimension, dim3 gridDim, dim3 blockDim,
 
 	cudaThreadSynchronize();
 	struct timeval lanczosTimeStop;
-	gettimeofday(&lanczosTimeStop, 0);
+	CommonFunc::gettimeofday(&lanczosTimeStop, 0);
 	printf("lanczos Iterations : %f seconds\n", getTimeUs(lanczosTimeStart, lanczosTimeStop)/1e6);
 
 	struct timeval eigCalcStart;
 	/*cudaThreadSynchronize();*/
-	gettimeofday(&eigCalcStart, 0);
+	CommonFunc::gettimeofday(&eigCalcStart, 0);
 
 	//printf("End : cycle = %d i = %d iter = %d\n", cycle, i , iter);
 
@@ -647,7 +647,7 @@ void lanczos(int p_nMatrixDimension, dim3 gridDim, dim3 blockDim,
 	/* end calcEigs */
 
 	struct timeval eigCalcStop;
-	cudaThreadSynchronize();gettimeofday(&eigCalcStop, 0);
+	cudaThreadSynchronize();CommonFunc::gettimeofday(&eigCalcStop, 0);
 	printf("Eigenvector calculation: %f microseconds\n", getTimeUs(eigCalcStart, eigCalcStop));
 
 	//cutSavePGMf("eigvec1.pgm", p_eigenVectors+2*p_nMatrixDimension, width,height);
@@ -1031,7 +1031,7 @@ void NormalizeEigVecs(int p_nMatrixDimension, float* p_aaEigVecs, int p_nEigNum)
 //// * 	CUDA_SAFE_CALL(cudaMemcpy(devMatrix, hostMatrix, nPixels * nDimension * sizeof(float), cudaMemcpyHostToDevice)); */
 //// 
 //// *   struct timeval start; */
-//// *   gettimeofday(&start, 0); */
+//// *   CommonFunc::gettimeofday(&start, 0); */
 //// 
 //// *   float* devRSqrtSum = convertMatrix(&myStencil, gridDim, blockDim, nDimension, devMatrix); */
 //// 
@@ -1053,7 +1053,7 @@ void NormalizeEigVecs(int p_nMatrixDimension, float* p_aaEigVecs, int p_nEigNum)
 //// 
 //// *           getNEigs, eigenValues, eigenVectors, nOrthoChoice, devRSqrtSum); */
 //// *   struct timeval stop; */
-//// *   gettimeofday(&stop, 0); */
+//// *   CommonFunc::gettimeofday(&stop, 0); */
 //// *   float solveTime = (float)(stop.tv_sec - start.tv_sec)  + ((float)(stop.tv_usec - start.tv_usec))*1e-6f; */
 //// 
 //// *   NormalizeEigVecs(nMatrixDimension, eigenVectors, getNEigs); */

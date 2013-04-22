@@ -1,7 +1,7 @@
 #ifndef __SPEC_H
 #define __SPEC_H
 
-#include "linux_time.h"
+#include "common_func.h"
 
 #define MAX_KERNEL 32
 //#define MAX_LENGTH (100)
@@ -25,7 +25,7 @@ void gpu_parabola(int norients, int width, int height, int border, float* devPix
 static inline int timestamp()
 {
     struct timeval tv;
-    gettimeofday(&tv, 0);
+    CommonFunc::gettimeofday(&tv, 0);
     return tv.tv_sec*1000000+tv.tv_usec;
 }
 

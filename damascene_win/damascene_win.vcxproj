@@ -65,7 +65,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;HAVE_LAPACK_CONFIG_H;LAPACK_COMPLEX_STRUCTURE;ADD_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\include;.\;C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc;C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc;.\include;.\;..\lapacke\include;..\getopt9\include;..\cutil\include;%(Include)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4819</DisableSpecificWarnings>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -118,7 +118,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_RELEASE;_CONSOLE;HAVE_LAPACK_CONFIG_H;LAPACK_COMPLEX_STRUCTURE;ADD_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\include;.\;C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc;C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc;.\include;.\;..\getopt9\include;..\cutil\include;%(Include)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -177,6 +177,7 @@
       <Runtime Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MTd</Runtime>
       <Runtime Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">MTd</Runtime>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="gPb\globalPb.cu">
       <FileType>Document</FileType>
@@ -240,7 +241,6 @@
     </CudaCompile>
     <CudaCompile Include="MemTest.cu">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="nonmax\nonmax.cu">
       <FileType>Document</FileType>
@@ -326,6 +326,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CircleTemplateTrace.h" />
+    <ClInclude Include="common\LCGRandom.h" />
+    <ClInclude Include="common\Win32specific.h" />
+    <ClInclude Include="common_func.h" />
     <ClInclude Include="cuda_common.cuh">
       <FileType>CppHeader</FileType>
     </ClInclude>
@@ -345,7 +348,7 @@
     <ClInclude Include="include\stencilMVM.h" />
     <ClInclude Include="include\texton.h" />
     <ClInclude Include="junction_cpp.h" />
-    <ClInclude Include="linux_time.h" />
+    <ClInclude Include="LineSegTrace.h" />
     <ClInclude Include="localcues\gradient.64.h" />
     <ClInclude Include="localcues\gradient.h" />
     <ClInclude Include="localcues\rotate.64.h" />
@@ -360,13 +363,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CircleTemplateTrace.cpp" />
+    <ClCompile Include="common\LCGRandom.cpp" />
+    <ClCompile Include="common_func.cpp" />
     <ClCompile Include="image_enhance.cpp" />
     <ClCompile Include="junction_cpp.cpp" />
+    <ClCompile Include="LineSegTrace.cpp" />
     <ClCompile Include="windows_acml.cpp" />
     <CudaCompile Include="cuda_common.cu">
       <FileType>CppCode</FileType>
     </CudaCompile>
-    <ClCompile Include="linux_time.cpp" />
     <ClCompile Include="localcues\cpu_convolve2d.cc">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>

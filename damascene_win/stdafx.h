@@ -11,5 +11,7 @@
 #include <tchar.h>
 #include <stdlib.h>
 
+#include "common/LCGRandom.h"
+
 #define  _USE_MATH_DEFINES
 // TODO: reference additional headers your program requires here

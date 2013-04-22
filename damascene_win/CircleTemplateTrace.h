@@ -39,9 +39,9 @@ public:
 
 
 private:
-	float m_fStartX;
-	float m_fStartY;
-	float m_fRadius;
+	int m_fStartX;
+	int m_fStartY;
+	int m_fRadius;
 	int m_iTraceWidth;
 	int m_iTraceHeight;
 

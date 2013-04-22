@@ -6,38 +6,61 @@
 #include <cuda_runtime.h>
 
 // helper functions and utilities to work with CUDA
-#include <helper_functions.h>
-#include <helper_cuda.h>
+#include <stdlib.h>
+#include <stdio.h>
 #include <cuda.h>
+#include <cutil.h>
+#include <fcntl.h>
+#include <float.h>
+#include <unistd.h>
+#include "texton.h"
+#include "convert.h"
+#include "intervening.h"
+#include "lanczos.h"
+#include "stencilMVM.h"
 
-	
-#include "cublas.h"
-	
+#include "localcues.h"
+#include "combine.h"
+#include "nonmax.h"
+#include "spectralPb.h"
+#include "globalPb.h"
+#include "skeleton.h"
+
+#include "common_func.h"
+#include "CircleTemplateTrace.h"
+#include "LineSegTrace.h"
+
+
 int main(int argc, char **argv)
 {
-// 	int devID;
-// 	cudaDeviceProp props;
-// 
-// 	// This will pick the best possible CUDA capable device
-// 	devID = findCudaDevice(argc, (const char **)argv);
-// 
-// 	//Get GPU information
-// 	checkCudaErrors(cudaGetDevice(&devID));
-// 	checkCudaErrors(cudaGetDeviceProperties(&props, devID));
-// 	printf("Device %d: \"%s\" with Compute %d.%d capability\n",
-// 		devID, props.name, props.major, props.minor);
-	cublasStatus status;
-	status = cublasInit();
-	if (status != CUBLAS_STATUS_SUCCESS)
-	{
-	 	printf("!!!! CUBLAS initialization error\n");
-	 	return;
-	}
-	cublasShutdown();
-	int imageSize = 512;
-	unsigned int*p_devRgbU; 
-	cudaMalloc((void**)&p_devRgbU,/* sizeof(unsigned int)**/imageSize);
-	cudaFree(p_devRgbU);
+	char* filename = argv[1];
+	char inputfile[MAX_PATH];
+	char outputColorfile[MAX_PATH];
 
+	char* period = strrchr(filename, '.');
+	if (period == 0) {
+		period = strrchr(filename, 0);
+	}
+	strncpy(inputfile, filename, period - filename);
+	sprintf(&inputfile[0] + (period - filename) , "Pb.pgm");
+
+	strncpy(outputColorfile, filename, period - filename);
+	sprintf(&outputColorfile[0] + (period - filename) , "_LineSeg.ppm");
+
+	/**null 从cutil内部申请内存*/
+	float* data = NULL;	
+	unsigned int width, height;
+
+	cutLoadPGMf(inputfile, (float**)&data, &width, &height);
+
+	CLineSegTrace trace;
+	int nAmount = trace.initTracePoints((float*)data, width, height);
+	printf("Valid Pt number:%d \n", nAmount);
+	trace.traceLineSegs();
+	trace.debugPrintOutput(outputColorfile);
+
+	cutFree(data);
+
+	system("pause");
 	return 1;
 }

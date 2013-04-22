@@ -16,15 +16,7 @@
 */
 #include "stdafx.h"
 #include "image_enhance.h"
-
-
-
-
-template <typename T> T CLAMP(const T& value, const T& low, const T& high) 
-{
-	return value < low ? low : (value > high ? high : value); 
-}
-
+#include "common_func.h"
 
 #include <string.h>
 #include <math.h>
@@ -41,89 +33,6 @@ template <typename T> T CLAMP(const T& value, const T& low, const T& high)
 
 gfloat RetinexScales[MAX_RETINEX_SCALES];
 
-// GimpPlugInInfo PLUG_IN_INFO =
-// {
-//   NULL,  /* init_proc  */
-//   NULL,  /* quit_proc  */
-//   query, /* query_proc */
-//   run,   /* run_proc   */
-// };
-
-// /*
-//  * Applies the algorithm
-//  */
-// void
-// retinex (GimpDrawable *drawable,
-//          GimpPreview  *preview)
-// {
-//   gint          x, y, width, height;
-//   gint          size, bytes;
-//   guchar       *src  = NULL;
-//   guchar       *psrc = NULL;
-//   GimpPixelRgn  dst_rgn, src_rgn;
-// 
-//   bytes = drawable->bpp;
-// 
-//   /*
-//    * Get the size of the current image or its selection.
-//    */
-//   if (preview)
-//     {
-//       src = gimp_zoom_preview_get_source (GIMP_ZOOM_PREVIEW (preview),
-//                                           &width, &height, &bytes);
-//     }
-//   else
-//     {
-//       if (! gimp_drawable_mask_intersect (drawable->drawable_id,
-//                                           &x, &y, &width, &height))
-//         return;
-// 
-//       /* Allocate memory */
-//       size = width * height * bytes;
-//       src = g_try_malloc (sizeof (guchar) * size);
-// 
-//       if (src == NULL)
-//         {
-//           g_warning ("Failed to allocate memory");
-//           return;
-//         }
-// 
-//       memset (src, 0, sizeof (guchar) * size);
-// 
-//       /* Fill allocated memory with pixel data */
-//       gimp_pixel_rgn_init (&src_rgn, drawable,
-//                            x, y, width, height,
-//                            FALSE, FALSE);
-//       gimp_pixel_rgn_get_rect (&src_rgn, src, x, y, width, height);
-//     }
-// 
-//   /*
-//     Algorithm for Multi-scale Retinex with color Restoration (MSRCR).
-//    */
-//   psrc = src;
-//   MSRCR (psrc, width, height, bytes, preview != NULL);
-// 
-//   if (preview)
-//     {
-//       gimp_preview_draw_buffer (preview, psrc, width * bytes);
-//     }
-//   else
-//     {
-//       gimp_pixel_rgn_init (&dst_rgn, drawable,
-//                            x, y, width, height,
-//                            TRUE, TRUE);
-//       gimp_pixel_rgn_set_rect (&dst_rgn, psrc, x, y, width, height);
-// 
-//       gimp_progress_update (1.0);
-// 
-//       gimp_drawable_flush (drawable);
-//       gimp_drawable_merge_shadow (drawable->drawable_id, TRUE);
-//       gimp_drawable_update (drawable->drawable_id, x, y, width, height);
-//     }
-// 
-//   g_free (src);
-// }
-// 
 
 /*
 * calculate scale values for desired distribution.
@@ -133,12 +42,12 @@ void
 {
 	if (nscales == 1)
 	{ /* For one filter we choose the median scale */
-		scales[0] = (gint) s / 2;
+		scales[0] = (gint) s / 2.f;
 	}
 	else if (nscales == 2)
 	{ /* For two filters whe choose the median and maximum scale */
-		scales[0] = (gint) s / 2;
-		scales[1] = (gint) s;
+		scales[0] = (gint) s / 2.f;
+		scales[1] = (gfloat) s;
 	}
 	else
 	{
@@ -149,13 +58,13 @@ void
 		{
 		case RETINEX_UNIFORM:
 			for(i = 0; i < nscales; ++i)
-				scales[i] = 2. + (gfloat) i * size_step;
+				scales[i] = 2.f + (gfloat) i * size_step;
 			break;
 
 		case RETINEX_LOW:
 			size_step = (gfloat) log(gfloat(s - 2.0f)) / (gfloat) nscales;
 			for (i = 0; i < nscales; ++i)
-				scales[i] = 2. + pow (10, (i * size_step) / log (10.f));
+				scales[i] = 2.f + pow (10, (i * size_step) / log (10.f));
 			break;
 
 		case RETINEX_HIGH:
@@ -188,25 +97,25 @@ void
 
 	q = 0;
 
-	if (sigma >= 2.5)
+	if (sigma >= 2.5f)
 	{
-		q = 0.98711 * sigma - 0.96330;
+		q = 0.98711f * sigma - 0.96330f;
 	}
-	else if ((sigma >= 0.5) && (sigma < 2.5))
+	else if ((sigma >= 0.5f) && (sigma < 2.5f))
 	{
-		q = 3.97156 - 4.14554 * (gfloat) sqrt ((double) 1 - 0.26891 * sigma);
+		q = 3.97156f - 4.14554f * (gfloat) sqrt ((double) 1 - 0.26891f * sigma);
 	}
 	else
 	{
-		q = 0.1147705018520355224609375;
+		q = 0.1147705018520355224609375f;
 	}
 
 	q2 = q * q;
 	q3 = q * q2;
-	c->b[0] = (1.57825+(2.44413*q)+(1.4281 *q2)+(0.422205*q3));
-	c->b[1] = (        (2.44413*q)+(2.85619*q2)+(1.26661 *q3));
-	c->b[2] = (                   -((1.4281*q2)+(1.26661 *q3)));
-	c->b[3] = (                                 (0.422205*q3));
+	c->b[0] = (1.57825f+(2.44413f*q)+(1.4281f *q2)+(0.422205f*q3));
+	c->b[1] = (        (2.44413f*q)+(2.85619f*q2)+(1.26661f *q3));
+	c->b[2] = (                   -((1.4281f*q2)+(1.26661f *q3)));
+	c->b[3] = (                                 (0.422205f*q3));
 	c->B = 1.0-((c->b[1]+c->b[2]+c->b[3])/c->b[0]);
 	c->sigma = sigma;
 	c->N = 3;
@@ -346,7 +255,7 @@ void
 	Summerize the results of the various filters according to a
 	specific weight(here equivalent for all).
 	*/
-	weight = 1./ (gfloat) rvals.nscales;
+	weight = 1.0f/ (gfloat) rvals.nscales;
 
 	/*
 	The recursive filtering algorithm needs different coefficients according
@@ -394,7 +303,7 @@ void
 			*/
 			for (i = 0, pos = channel; i < channelsize; i++, pos += bytes)
 			{
-				dst[pos] += weight * (log (src[pos] + 1.) - log (out[i]));
+				dst[pos] += weight * (log (src[pos] + 1.f) - log (out[i]));
 			}
 
 			//            if (!preview_mode)
@@ -422,11 +331,11 @@ void
 		psrc = src+i;
 		pdst = dst+i;
 
-		logl = log((gfloat)psrc[0] + (gfloat)psrc[1] + (gfloat)psrc[2] + 3.);
+		logl = log((gfloat)psrc[0] + (gfloat)psrc[1] + (gfloat)psrc[2] + 3.f);
 
-		pdst[0] = gain * ((log(alpha * (psrc[0]+1.)) - logl) * pdst[0]) + offset;
-		pdst[1] = gain * ((log(alpha * (psrc[1]+1.)) - logl) * pdst[1]) + offset;
-		pdst[2] = gain * ((log(alpha * (psrc[2]+1.)) - logl) * pdst[2]) + offset;
+		pdst[0] = float(gain * ((log(alpha * (psrc[0]+1.)) - logl) * pdst[0]) + offset);
+		pdst[1] = float(gain * ((log(alpha * (psrc[1]+1.)) - logl) * pdst[1]) + offset);
+		pdst[2] = float(gain * ((log(alpha * (psrc[2]+1.)) - logl) * pdst[2]) + offset);
 	}
 
 	/*  if (!preview_mode)
@@ -456,7 +365,7 @@ void
 		{
 			gfloat c = 255 * ( pdst[j] - mini ) / range;
 
-			psrc[j] = (guchar) CLAMP<int> (c, 0, 255);
+			psrc[j] = (guchar) CommonFunc::CLAMP<int> ((gint)c, 0, 255);
 		}
 	}
 

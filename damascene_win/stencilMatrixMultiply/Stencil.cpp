@@ -4,6 +4,9 @@
 #include <cstdio>
 #include <cstring>
 
+
+#pragma  warning(disable:4996)
+
 Stencil::Stencil(int radiusIn, int widthIn, int heightIn, int matrixPitchInFloatsIn) : radius(radiusIn), width(widthIn), height(heightIn), matrixPitchInFloats(matrixPitchInFloatsIn) {
   int r2 = radius * radius;
   int previousOffset = 0;
@@ -97,7 +100,7 @@ float* Stencil::readStencilMatrix(char* filename) {
 
   assert(fp != NULL);
   float* array = (float*)malloc(stencilArea * matrixPitchInFloats * sizeof(float));
-  for(int i = 0; i < stencilArea * matrixPitchInFloats; i++) {
+  for(size_t i = 0; i < stencilArea * matrixPitchInFloats; i++) {
     array[i] = 0.0f;
   }
   int n = 0;
@@ -105,14 +108,14 @@ float* Stencil::readStencilMatrix(char* filename) {
 
   assert(n == (width * height)); 
 
-  int nnz = 0;
+  size_t  nnz= 0;
   fread(&nnz,sizeof(int),1,fp);
   assert(nnz < stencilArea * width * height);
 
   int* x = new int[stencilArea]; //col indices;
   double* z = new double[stencilArea]; //values
                          
-  int nz = 0;
+  unsigned int nz = 0;
   for (int row = 0; row < n; row++) {
     fread(&nz,sizeof(int),1,fp); //number of entries in this row
     assert(nz <= stencilArea);
@@ -120,7 +123,7 @@ float* Stencil::readStencilMatrix(char* filename) {
     fread(z,sizeof(double),nz,fp); //value
     fread(x,sizeof(int),nz,fp);    //col index
     
-    for (int col = 0; col < nz; col++) {
+    for (size_t col = 0; col < nz; col++) {
   //     if ((row == 43) && (x[col] == 55)) {
 //         printf("Element 43, 55 = %f\n", z[col]);
 //       }

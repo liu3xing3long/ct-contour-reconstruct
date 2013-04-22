@@ -45,7 +45,7 @@ static RetinexParams rvals =
   240,             /* Scale */
   3,               /* Scales */
   RETINEX_UNIFORM, /* Echelles reparties uniformement */
-  1.2              /* A voir */
+  /*1.2f*/2.0f              /* A voir */
 };
 
 /*

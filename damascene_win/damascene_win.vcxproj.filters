@@ -61,6 +61,9 @@
     <Filter Include="Cuda\junction">
       <UniqueIdentifier>{39327f05-dd28-44e9-af24-ace169b9be54}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CppCommon">
+      <UniqueIdentifier>{8fe2df12-5850-404a-8726-aaaecec58056}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
@@ -129,9 +132,6 @@
     <ClInclude Include="unistd.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="linux_time.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="windows_acml.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -156,6 +156,18 @@
     <ClInclude Include="CircleTemplateTrace.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LineSegTrace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common_func.h">
+      <Filter>CppCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="common\LCGRandom.h">
+      <Filter>CppCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Win32specific.h">
+      <Filter>CppCommon</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -173,9 +185,6 @@
     <ClCompile Include="stencilMatrixMultiply\Stencil.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="linux_time.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="windows_acml.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
@@ -187,6 +196,15 @@
     </ClCompile>
     <ClCompile Include="CircleTemplateTrace.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LineSegTrace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common_func.cpp">
+      <Filter>CppCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="common\LCGRandom.cpp">
+      <Filter>CppCommon</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

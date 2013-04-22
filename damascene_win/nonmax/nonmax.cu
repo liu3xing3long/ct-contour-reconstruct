@@ -6,9 +6,9 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "linux_time.h"
 #include <time.h>
 #include "nonmax.h"
+#include "common_func.h"
 
 #define M_PIl           3.1415926535897932384626433832795029L  /* pi */
 #define M_PI_2l         1.5707963267948966192313216916397514L  /* pi/2 */
@@ -364,12 +364,12 @@ void Oriented_2D(int p_nHeight, int p_nWidth, float* m, int* m_ori, float* nmax)
 void nonMaxSuppression(int p_nWidth, int p_nHeight, float* p_devPB, int p_nDevPBPitch, float* devNMax)
 {
 	struct timeval start;
-	gettimeofday(&start, 0);
+	CommonFunc::gettimeofday(&start, 0);
 
 	int size = p_nWidth*p_nHeight;
 
 	struct timeval startMax;
-	gettimeofday(&startMax, 0);
+	CommonFunc::gettimeofday(&startMax, 0);
 
 	float* devMaxPB = 0;
 	int* devOri = 0;
@@ -380,7 +380,7 @@ void nonMaxSuppression(int p_nWidth, int p_nHeight, float* p_devPB, int p_nDevPB
 
 	//size_t pbPitch;
 	initCudaArrays(size, &devMaxPB, &devOri);
-	//gettimeofday(&start, 0);
+	//CommonFunc::gettimeofday(&start, 0);
         //printf("\nNow size %d Pitch %d", size, pbPitch);
 	//printf("\nNow Pitch %d size =%d", p_nDevPBPitch, size);
 	devFindMax<<<gridDim, blockDim>>>(size, p_nDevPBPitch, p_devPB, devMaxPB, devOri);
@@ -390,13 +390,13 @@ void nonMaxSuppression(int p_nWidth, int p_nHeight, float* p_devPB, int p_nDevPB
 
 
 	struct timeval stopMax;
-	gettimeofday(&stopMax, 0);
+	CommonFunc::gettimeofday(&stopMax, 0);
 	float solveTime = (float)(stopMax.tv_sec - startMax.tv_sec)  + ((float)(stopMax.tv_usec - startMax.tv_usec))*1e-6f;
 	printf("\nMax time: %f seconds", solveTime);
 
 
 	struct timeval startNoMax;
-	gettimeofday(&startNoMax, 0);
+	CommonFunc::gettimeofday(&startNoMax, 0);
 
 	cudaChannelFormatDesc channelMax = cudaCreateChannelDesc<float>();
 	size_t offset = 0;
@@ -413,13 +413,13 @@ void nonMaxSuppression(int p_nWidth, int p_nHeight, float* p_devPB, int p_nDevPB
 	freeCudaArrays(devMaxPB, devOri);
 
 	struct timeval stopNoMax;
-	gettimeofday(&stopNoMax, 0);
+	CommonFunc::gettimeofday(&stopNoMax, 0);
 	solveTime = (float)(stopNoMax.tv_sec - startNoMax.tv_sec)  + ((float)(stopNoMax.tv_usec - startNoMax.tv_usec))*1e-6f;
 	printf("\nOriented Max time: %f seconds", solveTime);
 
 
 	struct timeval stop;
-	gettimeofday(&stop, 0);
+	CommonFunc::gettimeofday(&stop, 0);
 	solveTime = (float)(stop.tv_sec - start.tv_sec)  + ((float)(stop.tv_usec - start.tv_usec))*1e-6f;
 
 	printf("\nSolve time: %f seconds\n", solveTime);

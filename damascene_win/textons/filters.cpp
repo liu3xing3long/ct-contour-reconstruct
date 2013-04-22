@@ -9,7 +9,8 @@
 #include <complex>
 
 using namespace std;
-
+#pragma warning(disable:4018)
+#pragma warning(disable:4244)
 
 int sign(int i)
 {
@@ -45,16 +46,16 @@ float* gaussian(
    if (deriv == 0) {
       /* compute guassian */
       for (unsigned long n = 0; n < size; n++, x++)
-         m[n] = exp(x*x*neg_two_sigma2_inv);
+         m[n] = (float)exp(x*x*neg_two_sigma2_inv);
    } else if (deriv == 1) {
       /* compute gaussian first derivative */
       for (unsigned long n = 0; n < size; n++, x++)
-         m[n] = exp(x*x*neg_two_sigma2_inv) * (-x);
+         m[n] = (float)exp(x*x*neg_two_sigma2_inv) * (-x);
    } else if (deriv == 2) {
       /* compute gaussian second derivative */
       for (unsigned long n = 0; n < size; n++, x++) {
          double x2 = x * x;
-         m[n] = exp(x2*neg_two_sigma2_inv) * (x2*sigma2_inv - 1);
+         m[n] = (float)exp(x2*neg_two_sigma2_inv) * (x2*sigma2_inv - 1);
       }
    } else {
       //throw ex_invalid_argument("only derivatives 0, 1, 2 supported");
@@ -82,7 +83,7 @@ float* gaussian(
    if(hlbrt)
    {
        hil = new float[size];
-       for(int i=0;i<size;i++)
+       for(size_t i=0;i<size;i++)
        {
            hil[i]=0;
            for(int j=0;j<size;j++)

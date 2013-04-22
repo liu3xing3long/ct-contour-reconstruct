@@ -1,9 +1,10 @@
 #include "StdAfx.h"
 #include "CircleTemplateTrace.h"
+#include "common_func.h"
 
 
 CCircleTemplateTrace::CCircleTemplateTrace(void)
-	:m_fStartY(0.f), m_fStartX(0.f),m_fRadius(0.f), m_iTraceHeight(0), m_iTraceWidth(0)
+	:m_fStartY(0), m_fStartX(0),m_fRadius(0), m_iTraceHeight(0), m_iTraceWidth(0)
 {
 }
 
@@ -13,20 +14,15 @@ CCircleTemplateTrace::~CCircleTemplateTrace(void)
 }
 
 
-template <typename T> T CLAMP(const T& value, const T& low, const T& high) 
-{
-	return value < low ? low : (value > high ? high : value); 
-}
-
 void CCircleTemplateTrace::initStartPoint( float circle_x, float circle_y, float radius, int width, int height )
 {
-	m_fRadius = radius;
-	m_fStartX = circle_x;
-	m_fStartY = circle_y;
+	m_fRadius = (int)radius;
+	m_fStartX = (int)circle_x;
+	m_fStartY = (int)circle_y;
 
-	m_fStartX = CLAMP<int>(m_fStartX, 0, width);
-	m_fStartY = CLAMP<int>(m_fStartY, 0, height);
-	m_fRadius = CLAMP<int>(m_fRadius, 0, width>height?width:height);
+	m_fStartX = CommonFunc::CLAMP<int>(m_fStartX, 0, width);
+	m_fStartY = CommonFunc::CLAMP<int>(m_fStartY, 0, height);
+	m_fRadius = CommonFunc::CLAMP<int>(m_fRadius, 0, width>height?width:height);
 
 	m_iTraceWidth = width;
 	m_iTraceHeight = height;
@@ -64,12 +60,12 @@ float CCircleTemplateTrace::findMaxradius(float* fContours, int width, int heigh
 	}
 
 
-	for (int iHei = 0; iHei < height; iHei++)
-	{
-		for (int iWid = 0; iWid < width; iWid++)
-		{
-		}
-	}
+// 	for (int iHei = 0; iHei < height; iHei++)
+// 	{
+// 		for (int iWid = 0; iWid < width; iWid++)
+// 		{
+// 		}
+// 	}
 
 
 	return 0.f;
@@ -92,10 +88,10 @@ void CCircleTemplateTrace::tracePoints(float* fContour)
 			for (int j=y-r; j<r+r; j++)
 			{
 				int xIdx = i, yIdx = j;
-				xIdx = CLAMP<int>(xIdx, 0, m_iTraceWidth);
-				yIdx = CLAMP<int>(yIdx, 0, m_iTraceHeight);
+				xIdx = CommonFunc::CLAMP<int>(xIdx, 0, m_iTraceWidth);
+				yIdx = CommonFunc::CLAMP<int>(yIdx, 0, m_iTraceHeight);
 
-				if (abs(sqrt((xIdx - x)*(xIdx - x) + (yIdx - y) * ((yIdx - y))) - r)< 1.f)
+				if (abs(sqrt(float((xIdx - x)*(xIdx - x) + (yIdx - y) * ((yIdx - y))) - r))< 1.f)
 				{
 
 				}

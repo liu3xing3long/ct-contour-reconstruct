@@ -5,7 +5,8 @@
 #include <cuda.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "linux_time.h"
+#include "common_func.h"
+
 #include <getopt.h>
 #include <time.h>
 #include <math.h>
@@ -51,7 +52,7 @@ int main(int argc, char** argv) {
 	CUDA_SAFE_CALL(cudaMemcpy(devMatrix, hostMatrix, nMatrixDimension * nDimension * sizeof(float), cudaMemcpyHostToDevice));
  
   struct timeval start;
-  gettimeofday(&start, 0);
+  CommonFunc::gettimeofday(&start, 0);
  
  
   float* eigenValues;
@@ -74,7 +75,7 @@ int main(int argc, char** argv) {
           
 /*           getNEigs, eigenValues, eigenVectors, nOrthoChoice, devRSqrtSum); */
   struct timeval stop;
-  gettimeofday(&stop, 0);
+  CommonFunc::gettimeofday(&stop, 0);
   float solveTime = (float)(stop.tv_sec - start.tv_sec)  + ((float)(stop.tv_usec - start.tv_usec))*1e-6f;
   
 /*   NormalizeEigVecs(nMatrixDimension, eigenVectors, getNEigs); */

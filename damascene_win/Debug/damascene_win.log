@@ -1,4 +1,4 @@
-﻿Build started 2013/4/20 星期六 15:48:37.
+﻿Build started 2013/4/22 星期一 17:19:19.
      1>Project "E:\ct-contour-reconstruction\damascene_win\damascene_win.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\damascene_win.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -7,7 +7,7 @@
        AddCudaCompileDeps:
        Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
        AddCudaCompileDeps:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /D_DEBUG /D_CONSOLE /DHAVE_LAPACK_CONFIG_H /DLAPACK_COMPLEX_STRUCTURE /DADD_ /D_MBCS /I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" /I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" /I.\include /I. /I..\lapacke\include /I..\getopt9\include /I..\cutil\include /I.\include /I.\ /I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" /I. /FIcuda_runtime.h /c E:\ct-contour-reconstruction\damascene_win\damascene\damascene.cu 
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
        AddCudaCompileDeps:
        Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
        AddCudaCompileDeps:
@@ -129,36 +129,7 @@
        CudaBuild:
          Skipping CUDA source file convert\convertmain.cu (excluded from build).
        CudaBuild:
-         Compiling CUDA source file damascene\damascene.cu...
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmpca24f95bd16f4b9284bf1e3f1329e55f.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2010 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\damascene.cu.obj" "E:\ct-contour-reconstruction\damascene_win\damascene\damascene.cu"
-         
-         E:\ct-contour-reconstruction\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2010 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\lapacke\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"  -G   --keep-dir "Debug" -maxrregcount=0  --machine 32 --compile  -g   -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "Debug\damascene.cu.obj" "E:\ct-contour-reconstruction\damascene_win\damascene\damascene.cu" 
-         damascene.cu
-     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(573): warning : non-void function "main" should return a value
-         
-     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(576): warning : dynamic initialization in unreachable code
-         
-         tmpxft_00000b10_00000000-2_damascene.cudafe1.gpu
-         tmpxft_00000b10_00000000-7_damascene.cudafe2.gpu
-         damascene.cu
-     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(573): warning : non-void function "main" should return a value
-         
-     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(576): warning : dynamic initialization in unreachable code
-         
-         tmpxft_00000b10_00000000-2_damascene.cudafe1.cpp
-         tmpxft_00000b10_00000000-12_damascene.ii
-     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(45): warning C4018: '<' : signed/unsigned mismatch
-     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(46): warning C4018: '<' : signed/unsigned mismatch
-     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(64): warning C4018: '<' : signed/unsigned mismatch
-     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(66): warning C4018: '<' : signed/unsigned mismatch
-     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(153): warning C4305: '=' : truncation from 'double' to 'float'
-     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(158): warning C4305: '=' : truncation from 'double' to 'float'
-     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(171): warning C4305: '=' : truncation from 'double' to 'float'
-     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(178): warning C4305: '=' : truncation from 'double' to 'float'
-     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(186): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(195): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>E:/ct-contour-reconstruction/damascene_win/damascene/damascene.cu(233): warning C4305: 'initializing' : truncation from 'double' to 'float'
+         Skipping CUDA source file damascene\damascene.cu (excluded from build).
        CudaBuild:
        Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
        CudaBuild:
@@ -186,7 +157,7 @@
        CudaBuild:
        Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
        CudaBuild:
-         Skipping CUDA source file MemTest.cu (excluded from build).
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
        CudaBuild:
        Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
        CudaBuild:
@@ -222,34 +193,20 @@
        CudaBuild:
        Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I.\include /I.\ /I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D HAVE_LAPACK_CONFIG_H /D LAPACK_COMPLEX_STRUCTURE /D ADD_ /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\damascene_win.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /wd4819 /analyze- /errorReport:prompt image_enhance.cpp junction_cpp.cpp linux_time.cpp stdafx.cpp windows_acml.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" /I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" /I.\include /I.\ /I..\lapacke\include /I..\getopt9\include /I..\cutil\include /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D HAVE_LAPACK_CONFIG_H /D LAPACK_COMPLEX_STRUCTURE /D ADD_ /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\damascene_win.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /wd4819 /analyze- /errorReport:prompt LineSegTrace.cpp common\LCGRandom.cpp common_func.cpp image_enhance.cpp junction_cpp.cpp stdafx.cpp stencilMatrixMultiply\Stencil.cpp
      1>cl : Command line warning D9030: '/Yc' is incompatible with multiprocessing; ignoring /MP switch
+         LineSegTrace.cpp
+         LCGRandom.cpp
+         common_func.cpp
          image_enhance.cpp
-     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.h(49): warning C4305: 'initializing' : truncation from 'double' to 'gfloat'
-     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(136): warning C4244: '=' : conversion from 'int' to 'gfloat', possible loss of data
-     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(140): warning C4244: '=' : conversion from 'int' to 'gfloat', possible loss of data
-     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(141): warning C4244: '=' : conversion from 'gint' to 'gfloat', possible loss of data
-     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(152): warning C4244: '=' : conversion from 'double' to 'gfloat', possible loss of data
-     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(158): warning C4244: '=' : conversion from 'double' to 'gfloat', possible loss of data
-     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(193): warning C4244: '=' : conversion from 'double' to 'gfloat', possible loss of data
-     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(197): warning C4244: '=' : conversion from 'double' to 'gfloat', possible loss of data
-     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(349): warning C4244: '=' : conversion from 'double' to 'gfloat', possible loss of data
-     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(397): warning C4244: '+=' : conversion from 'double' to 'gfloat', possible loss of data
-     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(425): warning C4244: '=' : conversion from 'double' to 'gfloat', possible loss of data
-     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(427): warning C4244: '=' : conversion from 'double' to 'gfloat', possible loss of data
-     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(428): warning C4244: '=' : conversion from 'double' to 'gfloat', possible loss of data
-     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(429): warning C4244: '=' : conversion from 'double' to 'gfloat', possible loss of data
-     1>e:\ct-contour-reconstruction\damascene_win\image_enhance.cpp(459): warning C4244: 'argument' : conversion from 'gfloat' to 'const int', possible loss of data
          junction_cpp.cpp
-         linux_time.cpp
          stdafx.cpp
-         windows_acml.cpp
+         Stencil.cpp
        ManifestResourceCompile:
          All outputs are up-to-date.
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\ct-contour-reconstruction\Debug\damascene_win.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\clapack\lib /LIBPATH:"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\lib\Win32" /LIBPATH:..\cutil\lib /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\lib\Win32" cuda.lib cudart.lib cublas.lib cutil.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\damascene_win.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\ct-contour-reconstruction\Debug\damascene_win.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\ct-contour-reconstruction\Debug\damascene_win.lib" /MACHINE:X86 Debug\combine.cu.obj
          Debug\convert.cu.obj
-         Debug\damascene.cu.obj
          Debug\globalPb.cu.obj
          Debug\intervening.cu.obj
          Debug\junction.cu.obj
@@ -257,6 +214,7 @@
          Debug\localcues.cu.obj
          Debug\parabola.cu.obj
          Debug\rotate.cu.obj
+         Debug\MemTest.cu.obj
          Debug\nonmax.cu.obj
          Debug\lanczos.cu.obj
          Debug\skeleton.cu.obj
@@ -266,10 +224,13 @@
          Debug\texton.cu.obj
          Debug\cuda_common.cu.obj
          Debug\damascene_win.exe.embed.manifest.res
+         Debug\CircleTemplateTrace.obj
+         Debug\LCGRandom.obj
+         Debug\common_func.obj
          Debug\image_enhance.obj
          Debug\junction_cpp.obj
+         Debug\LineSegTrace.obj
          Debug\windows_acml.obj
-         Debug\linux_time.obj
          Debug\stdafx.obj
          Debug\Stencil.obj
          Debug\filters.obj
@@ -286,4 +247,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:08.28
+Time Elapsed 00:00:02.05
