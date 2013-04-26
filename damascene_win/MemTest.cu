@@ -42,7 +42,7 @@ int main(int argc, char **argv)
 		period = strrchr(filename, 0);
 	}
 	strncpy(inputfile, filename, period - filename);
-	sprintf(&inputfile[0] + (period - filename) , "Pb.pgm");
+	sprintf(&inputfile[0] + (period - filename) , "Pbthin.pgm");
 
 	strncpy(outputColorfile, filename, period - filename);
 	sprintf(&outputColorfile[0] + (period - filename) , "_LineSeg.ppm");

@@ -610,7 +610,9 @@ void testSgemm() {
 }
 */
 
-int kmeans(int textonChoice, int nPixels, int width, int height, int clusterCount, int filterCount, float* devResponses, int** p_devClusters, int maxIter, int convThresh) {
+int kmeans(int textonChoice, int nPixels, int width, int height, int clusterCount, 
+		   int filterCount, float* devResponses, int** p_devClusters, int maxIter, int convThresh) 
+{
   printf("Beginning kmeans\n", maxIter);
   dim3 gridDim = dim3((width - 1)/XBLOCK + 1, (height - 1)/YBLOCK + 1);
   dim3 blockDim = dim3(XBLOCK, YBLOCK);

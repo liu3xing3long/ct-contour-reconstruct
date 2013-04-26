@@ -41,6 +41,7 @@ __global__ void combine_kernel(int nPixels, int cuePitchInFloats, float* devBg, 
     accumulant += *pointer * coefficients[2];
     accumulant2 += *pointer * weights[2];
 
+	/*
     pointer = &devCga[orientedIndex];
     accumulant += *pointer * coefficients[3];
     accumulant2 += *pointer * weights[3];
@@ -60,7 +61,7 @@ __global__ void combine_kernel(int nPixels, int cuePitchInFloats, float* devBg, 
     pointer += 8 * cuePitchInFloats;
     accumulant += *pointer * coefficients[8];
     accumulant2 += *pointer * weights[8];
-
+	*/
     pointer = &devTg[orientedIndex];
     accumulant += *pointer * coefficients[9];
     accumulant2 += *pointer * weights[9];

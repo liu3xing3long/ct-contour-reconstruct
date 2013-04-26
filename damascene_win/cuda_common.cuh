@@ -48,6 +48,6 @@ typedef unsigned int uint;
 float*	getImage(uint width, uint height, float* devImage);
 int*	getImage(uint width, uint height, int* devImage);
 
-#define GRADIENT_BORDER 30
+#define GRADIENT_BORDER 10
 
 #endif // cuda_common_h__

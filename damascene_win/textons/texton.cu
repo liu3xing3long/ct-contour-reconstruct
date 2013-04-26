@@ -37,6 +37,9 @@ __global__ void convolve(int filterCount, int nPixels, int width, int height, fl
 }
 */
 
+/**
+* 多尺度的卷积
+*/
 __global__ void convolve(int filterCount, int nPixels, int width, int height, float* output) {
   int x = blockDim.x * blockIdx.x + threadIdx.x;
   int y = blockDim.y * blockIdx.y + threadIdx.y;

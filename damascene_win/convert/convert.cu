@@ -9,8 +9,9 @@
 
 #define XBLOCK 16
 #define YBLOCK 16
+ 
+//#define IMAGE_ENHANCE
 
-#define IMAGE_ENHANCE
 
 __global__ void rgbUtoGreyF_kernel(int width, int height, unsigned int* rgbU, float* grey) {
 	int x = blockDim.x * blockIdx.x + threadIdx.x;
@@ -119,6 +120,15 @@ void loadPPM_rgbU(char* filename, uint* p_width, uint* p_height, uint** p_devRgb
 	/// 增强图像，加大对比度
 	printf("Enhancing image %s...... \n",filename);
 	MSRCR(data, *p_width, *p_height, sizeof(unsigned int), false);
+
+	char outputEnhancedfilename[256];
+	char* period = strrchr(filename, '.');
+	if (period == 0) {
+		period = strrchr(filename, 0);
+	}
+	strncpy(outputEnhancedfilename, filename, period - filename);
+	sprintf(&outputEnhancedfilename[0] + (period - filename), "_enhanced.pgm");
+	cutSavePPM4ub(outputEnhancedfilename, data, *p_width, *p_height);
 #endif
 
 	CUDA_SAFE_CALL(cudaMalloc((void**)p_devRgbU, imageSize));

@@ -23,6 +23,7 @@
 #include "common_func.h"
 #include "CircleTemplateTrace.h"
 #include "LineSegTrace.h"
+#include "image_enhance.h"
 
 #define __TIMER_SPECFIC
 /*
@@ -247,7 +248,7 @@ int main(int argc, char** argv) {
 		char outputgpbAllfilename[MAX_PATH];
 		char outputgpbTextfilename[MAX_PATH];
 		char outputTextonfilename[MAX_PATH];
-		char outputGradientfilename[MAX_PATH];
+		char outputColorfile[MAX_PATH];
 
 		printf("Processing: %s, output in ", filename);
 		char* period = strrchr(filename, '.');
@@ -275,12 +276,10 @@ int main(int argc, char** argv) {
 		strncpy(outputTextonfilename, filename, period - filename);
 		sprintf(&outputTextonfilename[0] + (period - filename), "_texton.pgm");
 
-		strncpy(outputGradientfilename, filename, period - filename);
-		sprintf(&outputGradientfilename[0] + (period - filename), "_gradient.pgm");
+		strncpy(outputColorfile, filename, period - filename);
+		sprintf(&outputColorfile[0] + (period - filename) , "_LineSeg.ppm");
 #endif
 
-//////////////////////////////////////////////////////////////////////////
-#if 1
 		uint width = 0;
 		uint height = 0;
 		uint* devRgbU = NULL;
@@ -289,21 +288,6 @@ int main(int argc, char** argv) {
  		printf("Image found: %i x %i pixels\n", width, height);
  		assert(width > 0);
  		assert(height > 0);
-#else
-#include "image_enhance.h"
-		unsigned char* data;	
-		uint width = 0;
-		uint height = 0;
-		int nPixels = width * height;
-		uint* devRgbU = NULL;
-
-		cutLoadPPM4ub(filename, (unsigned char**)&data, &width, &height);
-		MSRCR(data, width, height, sizeof(unsigned int), false);
-		cutSavePPM4ub(outputGradientfilename, data, width, height);
-
-		return;
-#endif
-//////////////////////////////////////////////////////////////////////////
 
 		uint timer;
 #ifdef __TIMER_SPECFIC
@@ -344,7 +328,7 @@ int main(int argc, char** argv) {
 		printf("saving textons to %s \n", outputTextonfilename);
 		int* hostTextons = (int*)malloc(sizeof(int)*width*height); 
 		cudaMemcpy(hostTextons, devTextons, sizeof(int)*width*height, cudaMemcpyDeviceToHost); 
-		cutSavePGMi(outputTextonfilename, (unsigned int*)hostTextons, width, height);
+ 		cutSavePGMi(outputTextonfilename, (unsigned int*)hostTextons, width, height);
 #endif
 
 		//   cutSavePGMi(outputgpbTextfilename, (unsigned int *)hostTextons, width, height);
@@ -413,10 +397,6 @@ int main(int argc, char** argv) {
 		localCues(width, height, devL, devA, devB, devTextons, &devBg, &devCga, &devCgb, &devTg, &matrixPitchInFloats, nTextonChoice);
 
 #ifdef DATA_PROFILE
-		float* hostTg = (float*)malloc(sizeof(int)*width*height); 
-		cudaMemcpy(hostTg, devTg, sizeof(float)*width*height, cudaMemcpyDeviceToHost); 
-		cutSavePGMf(outputTextonfilename, hostTg, width, height);
-		delete hostTg;
 #endif
 
 		cutStopTimer(localcuestimer);
@@ -454,21 +434,6 @@ int main(int argc, char** argv) {
 		float* devMPbO;
 		float *devCombinedGradient;
 		combine(width, height, matrixPitchInFloats, devBg, devCga, devCgb, devTg, &devMPbO, &devCombinedGradient, nTextonChoice);
-
-
-#ifdef DATA_PROFILE
-		float* hostGradient = (float*)malloc(sizeof(float)* matrixPitchInFloats *8); 
-		cudaMemcpy(hostGradient, devCombinedGradient, 8* sizeof(float)*matrixPitchInFloats, cudaMemcpyDeviceToHost); 
-		for (int i =0; i < 8; i++)
-		{
-			char tmp_fileName[MAX_PATH];
-			sprintf(tmp_fileName, "%s_%i%s",outputGradientfilename ,i,"_gradient.pgm");
-			printf("writing %s \n", tmp_fileName);
-			float* pTmp = hostGradient + i*width*height;
-			cutSavePGMf(tmp_fileName, pTmp , width, height);
-		}
-		//delete hostGradient;
-#endif
 
 #ifdef __TIMER_SPECFIC
 		cutStopTimer(timer_specific);
@@ -577,6 +542,15 @@ int main(int argc, char** argv) {
 #ifdef DATA_PROFILE
 		writeTextImage(outputgpbTextfilename, width, height, hostGPb_thin);
 		printf("writing text image file %s finished \n", outputgpbTextfilename);
+
+		//////////////////////////////////////////////////////////////////////////
+		/// Line Segment Trace
+		CLineSegTrace trace;
+		int nAmount = trace.initTracePoints((float*)hostGPb_thin, width, height);
+		printf("Valid Pt number:%d \n", nAmount);
+		trace.traceLineSegs();
+		trace.debugPrintOutput(outputColorfile, 5, 10000); 
+		//////////////////////////////////////////////////////////////////////////
 #endif
 		free(hostGPb_thin);
 		/* end thin image */

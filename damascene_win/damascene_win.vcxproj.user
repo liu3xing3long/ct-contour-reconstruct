@@ -5,7 +5,7 @@
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LocalDebuggerCommandArguments>E:\ct-contour-reconstruction\Release\40.ppm</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>E:\ct-contour-reconstruction\Release\69020.ppm</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

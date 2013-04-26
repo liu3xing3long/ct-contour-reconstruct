@@ -1,4 +1,4 @@
-﻿Build started 2013/4/22 星期一 17:31:56.
+﻿Build started 2013/4/26 星期五 10:38:01.
      1>Project "E:\ct-contour-reconstruction\damascene_win\damascene_win.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Release\damascene_win.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -25,7 +25,7 @@
        AddCudaCompileDeps:
        Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
        AddCudaCompileDeps:
-       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /D_RELEASE /D_CONSOLE /DHAVE_LAPACK_CONFIG_H /DLAPACK_COMPLEX_STRUCTURE /DADD_ /D_MBCS /I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" /I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" /I.\include /I. /I..\getopt9\include /I..\cutil\include /I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" /I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" /I.\include /I.\ /I..\getopt9\include /I..\cutil\include /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" /I. /FIcuda_runtime.h /c E:\ct-contour-reconstruction\damascene_win\noReorthog\lanczos.cu 
        AddCudaCompileDeps:
        Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
        AddCudaCompileDeps:
@@ -163,7 +163,21 @@
        CudaBuild:
          Skipping CUDA source file nonmax\nonmaxmain.cu (excluded from build).
        CudaBuild:
-       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+         Compiling CUDA source file noReorthog\lanczos.cu...
+         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmp32ff65523b154dc99d0e6a01e9aa1c6f.cmd"
+         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2010 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\getopt9\include" -I"..\cutil\include" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I".\\" -I"..\getopt9\include" -I"..\cutil\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "Release" -maxrregcount=0  --machine 32 --compile    -use_fast_math -DWIN32 -D_RELEASE -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /O2 /Zi  /MT  " -o "Release\lanczos.cu.obj" "E:\ct-contour-reconstruction\damascene_win\noReorthog\lanczos.cu"
+         
+         E:\ct-contour-reconstruction\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env --cl-version 2010 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\getopt9\include" -I"..\cutil\include" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I".\\" -I"..\getopt9\include" -I"..\cutil\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "Release" -maxrregcount=0  --machine 32 --compile    -use_fast_math -DWIN32 -D_RELEASE -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /O2 /Zi  /MT  " -o "Release\lanczos.cu.obj" "E:\ct-contour-reconstruction\damascene_win\noReorthog\lanczos.cu" 
+         lanczos.cu
+         tmpxft_00001018_00000000-2_lanczos.cudafe1.gpu
+         tmpxft_00001018_00000000-7_lanczos.cudafe2.gpu
+         lanczos.cu
+         tmpxft_00001018_00000000-2_lanczos.cudafe1.cpp
+         tmpxft_00001018_00000000-12_lanczos.ii
+     1>E:/ct-contour-reconstruction/damascene_win/noReorthog/lanczos.cu(359): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>E:/ct-contour-reconstruction/damascene_win/noReorthog/lanczos.cu(364): warning C4018: '<' : signed/unsigned mismatch
+     1>E:/ct-contour-reconstruction/damascene_win/noReorthog/lanczos.cu(366): warning C4018: '>=' : signed/unsigned mismatch
+     1>E:/ct-contour-reconstruction/damascene_win/noReorthog/lanczos.cu(445): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
        CudaBuild:
          Skipping CUDA source file noReorthog\lanczosmain.cu (excluded from build).
        CudaBuild:
@@ -194,8 +208,7 @@
        Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
        ClCompile:
          All outputs are up-to-date.
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" /I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" /I.\include /I.\ /I..\getopt9\include /I..\cutil\include /Zi /nologo /W3 /WX- /MP /O2 /Oi /Oy- /GL /D WIN32 /D _RELEASE /D _CONSOLE /D HAVE_LAPACK_CONFIG_H /D LAPACK_COMPLEX_STRUCTURE /D ADD_ /D _MBCS /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\damascene_win.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt image_enhance.cpp
-         image_enhance.cpp
+         All outputs are up-to-date.
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\ct-contour-reconstruction\Release\damascene_win.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\lib\Win32" /LIBPATH:..\cutil\lib /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\lib\Win32" cuda.lib cudart.lib cublas.lib cutil.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\damascene_win.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\ct-contour-reconstruction\Release\damascene_win.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\ct-contour-reconstruction\Release\damascene_win.lib" /MACHINE:X86 Release\combine.cu.obj
          Release\convert.cu.obj
@@ -237,4 +250,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.42
+Time Elapsed 00:00:10.13

@@ -17,12 +17,6 @@ typedef struct
   gfloat   cvar;
 } RetinexParams;
 
-typedef enum
-{
-  filter_uniform,
-  filter_low,
-  filter_high
-} FilterMode;
 
 #define RETINEX_UNIFORM 0
 #define RETINEX_LOW     1
@@ -45,7 +39,7 @@ static RetinexParams rvals =
   240,             /* Scale */
   3,               /* Scales */
   RETINEX_UNIFORM, /* Echelles reparties uniformement */
-  /*1.2f*/2.0f              /* A voir */
+  /*1.2f*/2.5f              /* A voir */
 };
 
 /*

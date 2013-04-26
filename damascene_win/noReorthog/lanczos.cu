@@ -2,7 +2,7 @@
 
 
 #define MAXITER 6000
-#define CHECKITER 500
+#define CHECKITER 300
 #define LUMPTOL 1e-5
 #define TOLERANCE 1e-3
 //#define TOLERANCE 3.46e-4

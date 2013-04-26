@@ -59,7 +59,7 @@ void __global__ normalizewrtmpb(int width, int height, unsigned int matrixPitchI
     if(idx < width && idy < height)
     {
 		/*
-		 *	0.1881 computed from matlab
+		 *	
 		 */
         devGPb_thin[idy*matrixPitchInFloats + idx] = (devMPb[idy*matrixPitchInFloats + idx] > 0.05)?1:0;
     }
