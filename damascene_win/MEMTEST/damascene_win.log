@@ -1,104 +1,177 @@
-﻿Build started 2013/4/20 星期六 0:10:49.
-     1>Project "E:\damascene-0.1.1\damascene_win\damascene_win\damascene_win.vcxproj" on node 2 (clean target(s)).
-     1>_PrepareForClean:
-         Deleting file "MEMTEST\damascene_win.lastbuildstate".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmpc28edde00f764347a348b35e6ef57764.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\combine.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\combine\combine.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\combine.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\combine\combine.cu" -clean 
-         Deleting file "MEMTEST\combine\combine.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmp597e81b3bf27459694f2c39ad1616e3e.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\convert.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\convert\convert.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\convert.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\convert\convert.cu" -clean 
-         Deleting file "MEMTEST\convert\convert.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmpaec5271166f84ffd992fe2b5c6a43881.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\globalPb.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\gPb\globalPb.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\globalPb.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\gPb\globalPb.cu" -clean 
-         Deleting file "MEMTEST\gPb\globalPb.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmp0c57eb07493b408b9d4b4d48eee07d50.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\intervening.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\intervening\intervening.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\intervening.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\intervening\intervening.cu" -clean 
-         Deleting file "MEMTEST\intervening\intervening.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmp1486eb44975f44d7b353781a16944e37.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\junction.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\junction\junction.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\junction.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\junction\junction.cu" -clean 
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmpe55a6a9182b84f0daef3395e7ca1e557.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\gradient.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\localcues\gradient.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\gradient.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\localcues\gradient.cu" -clean 
-         Deleting file "MEMTEST\localcues\gradient.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmp1ae6b45b836d41288dc55e2a745ab8e1.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\localcues.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\localcues\localcues.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\localcues.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\localcues\localcues.cu" -clean 
-         Deleting file "MEMTEST\localcues\localcues.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmp208019a7518f4bc2af1ad737db5ac345.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\parabola.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\localcues\parabola.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\parabola.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\localcues\parabola.cu" -clean 
-         Deleting file "MEMTEST\localcues\parabola.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmp892cf60ee70f4eaf8a060cc344f79256.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\rotate.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\localcues\rotate.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\rotate.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\localcues\rotate.cu" -clean 
-         Deleting file "MEMTEST\localcues\rotate.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmpc05592a13962479bbe1385eddd9838f8.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\MemTest.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\MemTest.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\MemTest.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\MemTest.cu" -clean 
-         Deleting file "MEMTEST\MemTest.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmp16d32629c01b4cc5977132476bfaa8c5.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\nonmax.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\nonmax\nonmax.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\nonmax.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\nonmax\nonmax.cu" -clean 
-         Deleting file "MEMTEST\nonmax\nonmax.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmp06da5428f18142d69f954620b938c41c.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\lanczos.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\noReorthog\lanczos.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\lanczos.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\noReorthog\lanczos.cu" -clean 
-         Deleting file "MEMTEST\noReorthog\lanczos.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmp20bbef2821cd4a1da5a2921b011c5f5f.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\skeleton.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\postprocess\skeleton.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\skeleton.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\postprocess\skeleton.cu" -clean 
-         Deleting file "MEMTEST\postprocess\skeleton.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmpc4cdfbc50e744e75aac694ce996b5d5e.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\spectralPb.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\sPb\spectralPb.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\spectralPb.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\sPb\spectralPb.cu" -clean 
-         Deleting file "MEMTEST\sPb\spectralPb.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmpb6f054d1bc8f4de5b4e73063cdd517fd.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\stencilMVM.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\stencilMatrixMultiply\stencilMVM.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\stencilMVM.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\stencilMatrixMultiply\stencilMVM.cu" -clean 
-         Deleting file "MEMTEST\stencilMatrixMultiply\stencilMVM.cu.deps".
-       CudaClean:
-         cmd.exe /C "C:\Users\Xinglongliu\AppData\Local\Temp\tmp09688125f400401999606b13777d6f58.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\cuda_common.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\cuda_common.cu" -clean
-         
-         E:\damascene-0.1.1\damascene_win\damascene_win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc" -I".\include" -I"." -I"..\clapack\include" -I"..\getopt9\include" -I"..\cutil\include" -I".\include" -I".\\" -I"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include" -I"..\clapack\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include"     --keep-dir "MEMTEST" -maxrregcount=0  --machine 32 --compile     -DWIN32 -D_DEBUG -D_CONSOLE -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DADD_ -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o "MEMTEST\cuda_common.cu.obj" "E:\damascene-0.1.1\damascene_win\damascene_win\cuda_common.cu" -clean 
-         Deleting file "MEMTEST\cuda_common.cu.deps".
-     1>Done Building Project "E:\damascene-0.1.1\damascene_win\damascene_win\damascene_win.vcxproj" (clean target(s)).
+﻿Build started 2013/5/14 星期二 14:27:28.
+     1>Project "E:\ct-contour-reconstruction\damascene_win\damascene_win.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "MEMTEST\damascene_win.unsuccessfulbuild".
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       AddCudaCompileDeps:
+       Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file combine\combine.64.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file combine\combinemain.cu (excluded from build).
+       CudaBuild:
+         Skipping CUDA source file combine\main.cu (excluded from build).
+         Skipping CUDA source file intervening\main.cu (excluded from build).
+         Skipping CUDA source file stencilMatrixMultiply\main.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file convert\convertmain.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file damascene\damascene.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file gPb\gpbmain.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file intervening\interveningmain.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file localcues\gradient.64.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file localcues\localcues.64.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file localcues\localcuesmain.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file localcues\rotate.64.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file nonmax\nonmaxmain.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file noReorthog\lanczosmain.cu (excluded from build).
+       CudaBuild:
+         Skipping CUDA source file noReorthog\spectralPb_kernel.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file postprocess\postprocessmain.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file sPb\spbmain.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       CudaBuild:
+         Skipping CUDA source file textons\kmeans.64.cu (excluded from build).
+       CudaBuild:
+         Skipping CUDA source file textons\kmeans.cu (excluded from build).
+       CudaBuild:
+         Skipping CUDA source file textons\kmeans_noatomics.cu (excluded from build).
+       CudaBuild:
+         Skipping CUDA source file textons\texton.64.cu (excluded from build).
+       CudaBuild:
+         Skipping CUDA source file textons\texton.cu (excluded from build).
+       CudaBuild:
+         Skipping CUDA source file textons\textonFilterMain.cu (excluded from build).
+       CudaBuild:
+       Skipping target "CudaBuild" because all output files are up-to-date with respect to the input files.
+       ClCompile:
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+       ManifestResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\ct-contour-reconstruction\MEMTEST\damascene_win.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\clapack\lib /LIBPATH:"C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\lib\Win32" /LIBPATH:..\cutil\lib /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\lib\Win32" cuda.lib cudart.lib cublas.lib cutil.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"MEMTEST\damascene_win.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\ct-contour-reconstruction\MEMTEST\damascene_win.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\ct-contour-reconstruction\MEMTEST\damascene_win.lib" /MACHINE:X86 MEMTEST\combine.cu.obj
+         MEMTEST\convert.cu.obj
+         MEMTEST\csr.cu.obj
+         MEMTEST\globalPb.cu.obj
+         MEMTEST\intervening.cu.obj
+         MEMTEST\junction.cu.obj
+         MEMTEST\gradient.cu.obj
+         MEMTEST\localcues.cu.obj
+         MEMTEST\parabola.cu.obj
+         MEMTEST\rotate.cu.obj
+         MEMTEST\MemTest.cu.obj
+         MEMTEST\nonmax.cu.obj
+         MEMTEST\lanczos.cu.obj
+         MEMTEST\pgm.cu.obj
+         MEMTEST\skeleton.cu.obj
+         MEMTEST\spectralPb.cu.obj
+         MEMTEST\stencilMVM.cu.obj
+         MEMTEST\cuda_common.cu.obj
+         MEMTEST\damascene_win.exe.embed.manifest.res
+         MEMTEST\LCGRandom.obj
+         MEMTEST\common_func.obj
+         MEMTEST\image_enhance.obj
+         MEMTEST\junction_cpp.obj
+         MEMTEST\LineSegTrace.obj
+         MEMTEST\windows_acml.obj
+         MEMTEST\stdafx.obj
+         MEMTEST\Stencil.obj
+         MEMTEST\filters.obj
+     1>LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+         Generating code
+         Finished generating code
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"MEMTEST\damascene_win.exe.embed.manifest" /manifest MEMTEST\damascene_win.exe.intermediate.manifest
+         All outputs are up-to-date.
+       LinkEmbedManifest:
+         All outputs are up-to-date.
+         damascene_win.vcxproj -> E:\ct-contour-reconstruction\MEMTEST\damascene_win.exe
+       FinalizeBuildStatus:
+         Deleting file "MEMTEST\damascene_win.unsuccessfulbuild".
+         Touching "MEMTEST\damascene_win.lastbuildstate".
+     1>Done Building Project "E:\ct-contour-reconstruction\damascene_win\damascene_win.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:07.22
+Time Elapsed 00:00:02.29

@@ -542,11 +542,11 @@ void intervene(Stencil& theStencil, float* devMPb, float** p_devMatrix, float si
 /*   mPb.addressMode[1] = cudaAddressModeClamp; */
 /*   mPb.filterMode = cudaFilterModePoint; */
 /*   mPb.normalized = 0; */
-  cudaChannelFormatDesc channelDesc = cudaCreateChannelDesc<float>();
-  cudaArray* mPbArray;
-  CUDA_SAFE_CALL(cudaMallocArray(&mPbArray, &channelDesc, width, height));
-  CUDA_SAFE_CALL(cudaBindTextureToArray(mPb, mPbArray));
-  CUDA_SAFE_CALL(cudaMemcpy2DToArray(mPbArray, 0, 0, devMPb, sizeof(float) * width, sizeof(float) * width, height, cudaMemcpyDeviceToDevice));
+   cudaChannelFormatDesc channelDesc = cudaCreateChannelDesc<float>();
+   cudaArray* mPbArray;
+   CUDA_SAFE_CALL(cudaMallocArray(&mPbArray, &channelDesc, width, height));
+   CUDA_SAFE_CALL(cudaBindTextureToArray(mPb, mPbArray));
+   CUDA_SAFE_CALL(cudaMemcpy2DToArray(mPbArray, 0, 0, devMPb, sizeof(float) * width, sizeof(float) * width, height, cudaMemcpyDeviceToDevice));
   size_t devMatrixPitch;
   CUDA_SAFE_CALL(cudaMallocPitch((void**)p_devMatrix, &devMatrixPitch, nPixels * sizeof(float), nDimension));
   assert(devMatrixPitch == theStencil.getMatrixPitch());

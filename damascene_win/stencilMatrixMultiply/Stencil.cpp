@@ -93,6 +93,30 @@ int Stencil::getDiameter() {
   return diameter;
 }
 
+float* Stencil::readFromStream(int* iColIdx, double* dwVals, int* iNonzeros)
+{
+// 	int* x = new int[stencilArea]; //col indices;
+// 	double* z = new double[stencilArea]; //values
+// 
+// 	unsigned int nz = 0;
+// 	for (int row = 0; row < n; row++) {
+// 		fread(&nz,sizeof(int),1,fp); //number of entries in this row
+// 		assert(nz <= stencilArea);
+// 
+// 		fread(z,sizeof(double),nz,fp); //value
+// 		fread(x,sizeof(int),nz,fp);    //col index
+// 
+// 		for (size_t col = 0; col < nz; col++) {
+// 			//     if ((row == 43) && (x[col] == 55)) {
+// 			//         printf("Element 43, 55 = %f\n", z[col]);
+// 			//       }
+// 			int index = matrixIndex(row, x[col]);
+// 			array[index] = (float)z[col];
+// 		} 
+// 	}
+	return NULL;
+}
+
 float* Stencil::readStencilMatrix(char* filename) { 
  
   

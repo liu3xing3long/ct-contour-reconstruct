@@ -5,6 +5,10 @@
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="EigSovle|Win32">
+      <Configuration>EigSovle</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="MEMTEST|Win32">
       <Configuration>MEMTEST</Configuration>
       <Platform>Win32</Platform>
@@ -21,6 +25,11 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
@@ -43,6 +52,9 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
@@ -51,6 +63,9 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">
@@ -65,7 +80,32 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;HAVE_LAPACK_CONFIG_H;LAPACK_COMPLEX_STRUCTURE;ADD_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc;C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc;.\include;.\;..\lapacke\include;..\getopt9\include;..\cutil\include;%(Include)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include;C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc;C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc;.\include;.\;..\lapacke\include;..\getopt9\include;..\cutil\include;%(Include)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>cuda.lib;cudart.lib;cublas.lib;cutil.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\clapack\lib;C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\lib\Win32;..\cutil\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <CudaCompile>
+      <Include>C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc;C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc;.\include;.\;..\lapacke\include;..\getopt9\include;..\cutil\include;%(Include)</Include>
+      <CodeGeneration>compute_30,sm_30</CodeGeneration>
+      <Defines>
+      </Defines>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;HAVE_LAPACK_CONFIG_H;LAPACK_COMPLEX_STRUCTURE;ADD_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include;C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc;C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc;.\include;.\;..\lapacke\include;..\getopt9\include;..\cutil\include;%(Include)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4819</DisableSpecificWarnings>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -86,22 +126,31 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;HAVE_LAPACK_CONFIG_H;LAPACK_COMPLEX_STRUCTURE;ADD_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\include;.\;C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.0\include;..\clapack\include</AdditionalIncludeDirectories>
+      <Optimization>Full</Optimization>
+      <PreprocessorDefinitions>WIN32;_RELEASE;_CONSOLE;HAVE_LAPACK_CONFIG_H;LAPACK_COMPLEX_STRUCTURE;ADD_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc;C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc;.\include;.\;..\getopt9\include;..\cutil\include;%(Include)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4819</DisableSpecificWarnings>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>cuda.lib;cudart.lib;cublas.lib;cutil.lib;blas.lib;clapack.lib;libf2c.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>cuda.lib;cudart.lib;cublas.lib;cutil.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\clapack\lib;C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\lib\Win32;..\cutil\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
     <CudaCompile>
       <Include>C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 5.0\C\common\inc;C:\ProgramData\NVIDIA Corporation\CUDA Samples\v5.0\common\inc;.\include;.\;..\clapack\include;..\getopt9\include;..\cutil\include;%(Include)</Include>
@@ -145,155 +194,200 @@
     <CudaCompile Include="combine\combine.64.cu">
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="combine\combine.cu">
       <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="combine\combinemain.cu">
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="combine\main.cu">
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="convert\convert.cu">
       <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="convert\convertmain.cu">
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CudaCompile>
+    <CudaCompile Include="csr.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="damascene\damascene.cu">
       <FileType>Document</FileType>
       <Runtime Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MTd</Runtime>
+      <Runtime Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">MTd</Runtime>
       <Runtime Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">MTd</Runtime>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="gPb\globalPb.cu">
       <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="gPb\gpbmain.cu">
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
-    <CudaCompile Include="intervening\intervening.cu" />
+    <CudaCompile Include="intervening\intervening.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
+    </CudaCompile>
     <CudaCompile Include="intervening\interveningmain.cu">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="intervening\main.cu">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
-    <CudaCompile Include="junction\junction.cu" />
+    <CudaCompile Include="lancozTest.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
+    </CudaCompile>
     <CudaCompile Include="localcues\gradient.64.cu">
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="localcues\gradient.cu">
       <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="localcues\localcues.64.cu">
       <FileType>Document</FileType>
       <CInterleavedPTX Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CInterleavedPTX>
+      <CInterleavedPTX Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">false</CInterleavedPTX>
       <CInterleavedPTX Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">false</CInterleavedPTX>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="localcues\localcues.cu">
       <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="localcues\localcuesmain.cu">
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
       <CInterleavedPTX Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CInterleavedPTX>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="localcues\parabola.cu">
       <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="localcues\rotate.64.cu">
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="localcues\rotate.cu">
       <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="MemTest.cu">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="nonmax\nonmax.cu">
       <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="nonmax\nonmaxmain.cu">
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="noReorthog\lanczos.cu">
       <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="noReorthog\lanczosmain.cu">
       <FileType>Document</FileType>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="noReorthog\spectralPb_kernel.cu">
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
+    <CudaCompile Include="pgm.cu" />
     <CudaCompile Include="postprocess\postprocessmain.cu">
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="postprocess\skeleton.cu">
       <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
+    <None Include="pgm.cuh" />
     <None Include="ReadMe.txt" />
     <CudaCompile Include="sPb\spbmain.cu">
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="sPb\spectralPb.cu">
       <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="stencilMatrixMultiply\main.cu">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="stencilMatrixMultiply\stencilMVM.cu" />
     <CudaCompile Include="textons\kmeans.64.cu">
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
@@ -304,12 +398,14 @@
     <CudaCompile Include="textons\kmeans_noatomics.cu">
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
     <CudaCompile Include="textons\texton.64.cu">
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
@@ -320,15 +416,21 @@
     <CudaCompile Include="textons\textonFilterMain.cu">
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CudaCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CircleTemplateTrace.h" />
+    <ClInclude Include="CircleTemplateTrace.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="common\LCGRandom.h" />
     <ClInclude Include="common\Win32specific.h" />
     <ClInclude Include="common_func.h" />
+    <ClInclude Include="csr.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="cuda_common.cuh">
       <FileType>CppHeader</FileType>
     </ClInclude>
@@ -362,28 +464,38 @@
     <ClInclude Include="windows_acml.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CircleTemplateTrace.cpp" />
+    <ClCompile Include="CircleTemplateTrace.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="common\LCGRandom.cpp" />
     <ClCompile Include="common_func.cpp" />
     <ClCompile Include="image_enhance.cpp" />
     <ClCompile Include="junction_cpp.cpp" />
     <ClCompile Include="LineSegTrace.cpp" />
+    <CudaCompile Include="solvEigenVec.cu">
+      <FileType>CppCode</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CudaCompile>
     <ClCompile Include="windows_acml.cpp" />
     <CudaCompile Include="cuda_common.cu">
       <FileType>CppCode</FileType>
     </CudaCompile>
     <ClCompile Include="localcues\cpu_convolve2d.cc">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="stencilMatrixMultiply\load_smatrix.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>

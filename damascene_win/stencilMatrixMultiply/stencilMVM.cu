@@ -220,6 +220,7 @@ int findPitchInFloats(int width) {
   return pitch/sizeof(float);
 }
 
+/// 计算每行的累加和
 float* convertMatrix(Stencil* theStencil, dim3 gridDim, dim3 blockDim, int nDimension, float* devMatrix) {
   int width = theStencil->getWidth();
   int height = theStencil->getHeight();
@@ -512,3 +513,131 @@ void chooseLargestGPU(bool verbose) {
 
 
 
+
+
+float* saveMatrix(Stencil* theStencil, dim3 gridDim, dim3 blockDim, int nDimension, float* devMatrix)
+{
+	  int width = theStencil->getWidth();
+  int height = theStencil->getHeight();
+  int nPixels = width * height;
+  int matrixPitchInFloats = theStencil->getMatrixPitchInFloats();
+  
+  int hostConstOffsets[STENCILAREAMAX];
+
+  theStencil->copyOffsets(hostConstOffsets);
+
+ // insert stuff here  
+  float* hostMatrix = new float[matrixPitchInFloats*nDimension];
+  CUDA_SAFE_CALL(cudaMemcpy(hostMatrix, devMatrix, matrixPitchInFloats * sizeof(float) * nDimension, cudaMemcpyDeviceToHost)); 
+ 
+   printf("Writing matrix to file ...\n");
+   FILE* fpw = fopen("ungeneralized.sma", "w"); 
+   fwrite(&nPixels, sizeof(int), 1, fpw); 
+
+   std::vector<Point> nonzeros;
+   
+//   for(int diag = 0; diag < nDimension; diag++) { 
+//     int offset = hostConstOffsets[diag];
+//    
+//     for(int row = 0; row < height; row++) { 
+//       for(int col = 0; col < width; col++) { 
+//         int currentX = col + xOffset; 
+//         int currentY = row + yOffset; 
+//         if ((currentX >= 0) && (currentX < width) && 
+//             (currentY >= 0) && (currentY < height)) { 
+//           int currentRow = row * width + col; 
+//           int currentCol = currentY * width + currentX; 
+//           float entry = hostMatrix[diag * matrixPitchInFloats + currentY * widthPitchInFloats + currentX]; 
+//           nonzeros.push_back(Point(currentRow, currentCol, entry)); 
+//         } 
+//       } 
+//     }     
+//   } 
+   int eltstart=0;
+   int eltsend=0;
+   for(int row=0;row<width*height;row++)
+   {
+   int currentDimension = 0;
+   int col=row;
+   int matrixOffset = row;
+    while (currentDimension < nDimension) {
+      col += hostConstOffsets[currentDimension];
+      
+      if ((col >= 0) && (col < nPixels)) {
+        float matrixEntry = hostMatrix[matrixOffset];
+        //float vectorEntry = tex1Dfetch(texVector, col);
+        //accumulant += matrixEntry * vectorEntry;
+        nonzeros.push_back(Point(row,col,matrixEntry));
+        eltsend++;
+      }
+      currentDimension++;
+      matrixOffset += matrixPitchInFloats;
+    }
+
+    //sort(nonzeros.begin()+eltstart, nonzeros.begin()+eltsend+1, lesscol);
+    eltstart = eltsend;
+    if((row+1) % 200000 == 0)printf("Processed row : %d\n", row+1);
+   }
+
+   
+  
+   int nnz = nonzeros.size(); 
+   printf("%i nonzeros found\n", nnz); 
+   fwrite(&nnz, sizeof(int), 1, fpw); 
+   int* n = new int[width * height]; 
+   int* cols = new int[nnz]; 
+   double* vals = new double[nnz]; 
+
+   memset(n, 0, sizeof(int) * width * height); 
+  
+   int* colPtr = cols; 
+   double* valPtr = vals; 
+   int start = 0;
+   int totalnnz = 0;
+   for(int index = 0; index < width * height; index++) {
+  
+     int i;
+     for(i = start; i < nnz && nonzeros[i].row == index; i++) { 
+       Point currentPoint = nonzeros[i]; 
+       if (index == currentPoint.row) { 
+         //printf("Row: %i, Col: %i, Val: %.2f\n", index, currentPoint.col, currentPoint.value);  
+         n[index]++; 
+         *colPtr = currentPoint.col; 
+         //if(i>0) if(*colPtr < nonzeros[i-1].col) printf("%d %d, %d %d\n", nonzeros[i].row,nonzeros[i].col, nonzeros[i-1].row, nonzeros[i-1].col); 
+         //if(i>0) assert(*colPtr > nonzeros[i-1].col);
+
+         *valPtr = currentPoint.value; 
+         colPtr++; 
+         valPtr++;
+         totalnnz ++;
+       } 
+     }
+    
+     //if(i!=start) printf("row %d : elts = %d\n", index, i-start);
+     start = i;
+    if((index+1) % 200000 == 0)printf("Processed index : %d\n", index+1);
+   }
+   if(nnz != totalnnz) printf("init nnz = %d next nnz = %d\n", nnz, totalnnz);
+
+   assert(totalnnz == nnz);
+
+
+  
+   int current = 0;
+   for (int row = 0; row < nPixels; row++) { 
+     int nz = n[row]; 
+     fwrite(&nz, sizeof(int), 1, fpw); 
+     fwrite(&vals[current], sizeof(double), nz, fpw); 
+     fwrite(&cols[current], sizeof(int), nz, fpw); 
+     current = current + nz; 
+   } 
+   fclose(fpw); 
+   printf("%i nonzeros found\n", nnz); 
+   delete [] hostMatrix;
+   delete [] n;
+   delete [] cols;
+   delete [] vals;
+
+//insert ends
+
+}

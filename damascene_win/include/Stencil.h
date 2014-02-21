@@ -22,6 +22,7 @@ class Stencil {
   int getRadius();
   int getDiameter();
   float* readStencilMatrix(char* filename);
+  float* readFromStream(int* iColIdx, double* dwVals, int* iNonzeros);
   void copyDiagonalOffsets(int* destOffsets);
   
  private:

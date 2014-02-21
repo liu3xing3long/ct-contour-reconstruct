@@ -67,6 +67,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
+    <None Include="pgm.cuh">
+      <Filter>Cuda\common</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -167,6 +170,9 @@
     </ClInclude>
     <ClInclude Include="common\Win32specific.h">
       <Filter>CppCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="csr.h">
+      <Filter>Cuda\noReorthog</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -325,8 +331,17 @@
     <CudaCompile Include="MemTest.cu">
       <Filter>Source Files</Filter>
     </CudaCompile>
-    <CudaCompile Include="junction\junction.cu">
-      <Filter>Cuda\junction</Filter>
+    <CudaCompile Include="pgm.cu">
+      <Filter>Cuda\common</Filter>
+    </CudaCompile>
+    <CudaCompile Include="lancozTest.cu">
+      <Filter>Cuda\noReorthog</Filter>
+    </CudaCompile>
+    <CudaCompile Include="csr.cu">
+      <Filter>Cuda\noReorthog</Filter>
+    </CudaCompile>
+    <CudaCompile Include="solvEigenVec.cu">
+      <Filter>Source Files</Filter>
     </CudaCompile>
   </ItemGroup>
 </Project>

@@ -33,3 +33,4 @@ int findPitchInFloats(int width);
 float* convertMatrix(Stencil* theStencil, dim3 gridDim, dim3 blockDim, int nDimension, float* devMatrix);
 
 int findNDimUnroll(int nDimension);
+float* saveMatrix(Stencil* theStencil, dim3 gridDim, dim3 blockDim, int nDimension, float* devMatrix);

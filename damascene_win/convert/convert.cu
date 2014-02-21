@@ -10,7 +10,7 @@
 #define XBLOCK 16
 #define YBLOCK 16
  
-//#define IMAGE_ENHANCE
+#define IMAGE_ENHANCE
 
 
 __global__ void rgbUtoGreyF_kernel(int width, int height, unsigned int* rgbU, float* grey) {

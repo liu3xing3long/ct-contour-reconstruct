@@ -30,37 +30,46 @@
 #include "CircleTemplateTrace.h"
 #include "LineSegTrace.h"
 
+#include "pgm.cuh"
 
 int main(int argc, char **argv)
 {
-	char* filename = argv[1];
-	char inputfile[MAX_PATH];
-	char outputColorfile[MAX_PATH];
+	for (int i =0; i<= 74; i++)
+	{
+		int fileIdx = i;
+		char filename[MAX_PATH];
+		sprintf(filename, "%s%d", argv[1], fileIdx);
+		char inputfile[MAX_PATH];
+		char outputColorfile[MAX_PATH];
 
-	char* period = strrchr(filename, '.');
-	if (period == 0) {
-		period = strrchr(filename, 0);
+		char* period = strrchr(filename, '.');
+		if (period == 0) {
+			period = strrchr(filename, 0);
+		}
+		strncpy(inputfile, filename, period - filename);
+		sprintf(&inputfile[0] + (period - filename) , "bin.pgm");
+
+		strncpy(outputColorfile, filename, period - filename);
+		sprintf(&outputColorfile[0] + (period - filename) , "_traced.pgm");
+
+		/**null 从cutil内部申请内存*/
+		//float* data = NULL;	
+		int width, height;
+
+		//cutLoadPGMf(inputfile, (float**)&data, &width, &height);
+		float* data = loadPGM(inputfile, &width, &height);
+		assert(width > 0 && height > 0);
+
+		CLineSegTrace trace;
+		int nAmount = trace.initTracePoints((float*)data, width, height);
+		printf("Outputting %s \n", inputfile);
+		printf("Valid Pt number:%d \n", nAmount);
+		trace.traceLineSegs();
+		trace.debugPrintOutput(outputColorfile, 70, 100000);
+
+/*		cutFree(data);*/
 	}
-	strncpy(inputfile, filename, period - filename);
-	sprintf(&inputfile[0] + (period - filename) , "Pbthin.pgm");
 
-	strncpy(outputColorfile, filename, period - filename);
-	sprintf(&outputColorfile[0] + (period - filename) , "_LineSeg.ppm");
-
-	/**null 从cutil内部申请内存*/
-	float* data = NULL;	
-	unsigned int width, height;
-
-	cutLoadPGMf(inputfile, (float**)&data, &width, &height);
-
-	CLineSegTrace trace;
-	int nAmount = trace.initTracePoints((float*)data, width, height);
-	printf("Valid Pt number:%d \n", nAmount);
-	trace.traceLineSegs();
-	trace.debugPrintOutput(outputColorfile);
-
-	cutFree(data);
-
-	system("pause");
+	//system("pause");
 	return 1;
 }

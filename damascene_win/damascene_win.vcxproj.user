@@ -4,8 +4,16 @@
     <LocalDebuggerCommandArguments>E:\ct-contour-reconstruction\debug\40.ppm</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EigSovle|Win32'">
+    <LocalDebuggerCommandArguments>E:\ct-contour-reconstruction\debug\40.ppm</LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LocalDebuggerCommandArguments>E:\ct-contour-reconstruction\Release\69020.ppm</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>F:\TESTWORK\frangi_filter_version2a\bindata\</LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MEMTEST|Win32'">
+    <LocalDebuggerCommandArguments>F:\TESTWORK\frangi_filter_version2a\bindata\</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

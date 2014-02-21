@@ -22,10 +22,10 @@
 int main(int argc, char** argv) {
   chooseLargestGPU(true);
 
-  int width = 321;
-  int height = 481;
+  int width = 16;
+  int height = 64;
   int radius = 5;
-  char* filename = "polynesia.sma";
+  char* filename = "E:\\ct-contour-reconstruction\\damascene_win\\stencilMatrixMultiply\\tiny.sma";
   int nMatrixDimension = width * height;
 
   int getNEigs = 25;

@@ -6,12 +6,15 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
+		EigSovle|Win32 = EigSovle|Win32
 		MEMTEST|Win32 = MEMTEST|Win32
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{54999832-80E5-4B03-9266-846EA1FBA553}.Debug|Win32.ActiveCfg = Debug|Win32
 		{54999832-80E5-4B03-9266-846EA1FBA553}.Debug|Win32.Build.0 = Debug|Win32
+		{54999832-80E5-4B03-9266-846EA1FBA553}.EigSovle|Win32.ActiveCfg = EigSovle|Win32
+		{54999832-80E5-4B03-9266-846EA1FBA553}.EigSovle|Win32.Build.0 = EigSovle|Win32
 		{54999832-80E5-4B03-9266-846EA1FBA553}.MEMTEST|Win32.ActiveCfg = MEMTEST|Win32
 		{54999832-80E5-4B03-9266-846EA1FBA553}.MEMTEST|Win32.Build.0 = MEMTEST|Win32
 		{54999832-80E5-4B03-9266-846EA1FBA553}.Release|Win32.ActiveCfg = Release|Win32

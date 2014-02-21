@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
   int radius = 1;
   int width = 4;
   int height = 4;
-  char* filename = "tiny.sma";
+  char* filename = "E:\\ct-contour-reconstruction\\damascene_win\\stencilMatrixMultiply\\tiny.sma";
   int nPixels = width * height;
   int matrixPitchInFloats = findPitchInFloats(nPixels);
 
